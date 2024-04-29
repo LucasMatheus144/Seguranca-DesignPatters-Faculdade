@@ -1,0 +1,85 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Funcionarios.funcionario
+
+@{
+    ViewData["Title"] = "Detalhes do Funcionário";
+}
+
+<h1>Detalhes do Funcionário</h1>
+
+<div>
+    <h4>Funcionário</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Foto)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Model.Foto" alt="Foto do Funcionário" class="img-fluid" />
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nascimento.ToString("dd/MM/yyyy"))
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CestaBasica)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CestaBasica)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Agencia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Agencia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Escolaridade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Escolaridade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Formacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Formacao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.geral)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.geral.Cep)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.centro_custo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.centro_custo.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.banco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.banco.Nome)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>

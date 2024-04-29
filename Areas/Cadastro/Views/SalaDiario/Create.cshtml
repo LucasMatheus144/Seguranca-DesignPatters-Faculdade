@@ -1,0 +1,88 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.salas_diario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>salas_diario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (ViewBag.sala_id != null)
+            {
+                @if (ViewBag.CodPeriodo != null)
+                {   
+                    string periodoLabel = "";
+                    switch ((string)ViewBag.CodPeriodo)
+                    {
+                        case "m":
+                            periodoLabel = "Manhã";
+                            break;
+                        case "t":
+                            periodoLabel = "Tarde";
+                            break;
+                        case "n":
+                            periodoLabel = "Noite";
+                            break;
+                        default:
+                            periodoLabel = "Desconhecido";
+                            break;
+                    }
+                    
+                    <div class="form-group">
+                        <label asp-for="sala_id" class="control-label" disabled ></label>
+                        <select asp-for="sala_id" class="form-control" asp-items="ViewBag.sala_id"  readonly></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Periodo" class="control-label" disabled></label>
+                        <input type="text" value="@periodoLabel" class="form-control" readonly />
+                        <select asp-for="Periodo" class="form-control" style="display: none;">
+                            <option value="m">Manhã</option>
+                            <option value="t">Tarde</option>
+                            <option value="n">Noite</option>
+                        </select>
+                        <span asp-validation-for="Periodo" class="text-danger"></span>
+                    </div>
+                }
+                else
+                {
+                     <div class="form-group">
+                            <label asp-for="sala_id" class="control-label"></label>
+                            <select asp-for="sala_id" class="form-control" asp-items="ViewBag.sala_id"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Periodo" class="control-label"></label>
+                        <select asp-for="Periodo" class="form-control">
+                            <option value="m">Manhã</option>
+                            <option value="t">Tarde</option>
+                            <option value="n">Noite</option>
+                        </select>
+                        <span asp-validation-for="Periodo" class="text-danger"></span>
+                    </div>
+                }
+            }
+
+
+            <div class="form-group">
+                <label asp-for="Nota" class="control-label"></label>
+                <input asp-for="Nota" class="form-control" />
+                <span asp-validation-for="Nota" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                 <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

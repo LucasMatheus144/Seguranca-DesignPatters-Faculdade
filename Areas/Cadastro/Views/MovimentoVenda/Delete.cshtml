@@ -1,0 +1,86 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimento_venda
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir</h1>
+
+<h3>Excluir essa Movimento Venda?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geral_tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geral_tipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_tipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_outro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_outro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_parcelas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_parcelas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_dia_vencto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_dia_vencto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_valor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_valor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_tipo_pagto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_tipo_pagto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movimento_data_estorno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movimento_data_estorno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Geral)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Geral.Cep)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="movimento_id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+    </form>
+</div>

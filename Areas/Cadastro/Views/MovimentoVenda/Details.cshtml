@@ -1,0 +1,87 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimento_venda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes do Movimento de Venda</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_tipo)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_tipo)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_outro)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_outro)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_parcelas)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_parcelas)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_dia_vencto)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_dia_vencto)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_data)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_data)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_valor)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_valor)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_tipo_pagto)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_tipo_pagto)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_email)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_email)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.movimento_data_estorno)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.movimento_data_estorno)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Geral)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Geral.Nome)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.movimento_id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

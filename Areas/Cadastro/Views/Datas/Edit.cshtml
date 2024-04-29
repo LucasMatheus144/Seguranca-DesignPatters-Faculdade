@@ -1,0 +1,57 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.datas
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Edição</h1>
+
+<h4>datas</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Ano" class="control-label"></label>
+                <input asp-for="Ano" class="form-control" />
+                <span asp-validation-for="Ano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <select asp-for="Tipo" class="form-control">
+                    <option value="1">Feriado</option>
+                    <option value="2">Recesso</option>
+                    <option value="3">Planejamento</option>
+                </select>
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descritivo" class="control-label"></label>
+                <input asp-for="Descritivo" class="form-control" />
+                <span asp-validation-for="Descritivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInicio" class="control-label"></label>
+                <input asp-for="DataInicio" class="form-control" />
+                <span asp-validation-for="DataInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataFinal" class="control-label"></label>
+                <input asp-for="DataFinal" class="form-control" />
+                <span asp-validation-for="DataFinal" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar para a listagem</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

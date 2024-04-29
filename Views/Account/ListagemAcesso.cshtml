@@ -1,0 +1,49 @@
+@model List<EspacoPotencial.Models.Account.Acesso>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..."
+    crossorigin="anonymous" />
+<h2>Lista de Usuários</h2>
+
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <a asp-action="Acesso" class="btn btn-success btn-sm">Novo Usuário</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table" id = "Cadastro">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Email</th>
+                <th>Permissoes</th>
+                <th>Ações</th> 
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Email</td>
+                    <td>
+                        @usuario.Permissao
+                    </td>
+
+
+                    <td>
+                        <a asp-action="EdicaoAcesso" asp-route-id="@usuario.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                        <a asp-action="ExclusaoAcesso" asp-route-id="@usuario.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>                     
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+    <div class="alert alert-danger">
+        <p>@TempData["ErrorMessage"]</p>
+    </div>
+}

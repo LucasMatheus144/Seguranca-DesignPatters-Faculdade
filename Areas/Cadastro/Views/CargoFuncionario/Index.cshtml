@@ -1,0 +1,82 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Funcionarios.cargo_funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listagem de Funcionarios Cargos</h1>
+
+<p>
+        <a asp-action="Create" class="btn btn-success btn-sm">Novo Cadastro</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cargos_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Situacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.motivo_desligamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cargos.Nome)
+            </td>
+            <td>
+                @{
+                    var situacao = item.Situacao == "1" ? "Ativo" : "Inativo";
+                }
+                @situacao
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicial)
+            </td>
+            <td>
+                @if (item.DataFinal.HasValue)
+                {
+                    @item.DataFinal.Value.ToString("dd/MM/yyyy")
+                }
+                else
+                {
+                      <span class="text-muted">Sem Data</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacao)
+            </td>
+           <td>
+                @if (item.motivo_desligamento != null)
+                {
+                    @Html.DisplayFor(modelItem => item.motivo_desligamento.Descricao)
+                }
+                else
+                {
+                    <span class="text-muted">Null</span>
+                }
+            </td>
+            <td>
+                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

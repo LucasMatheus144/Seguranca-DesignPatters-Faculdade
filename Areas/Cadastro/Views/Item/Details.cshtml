@@ -1,0 +1,81 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.item
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Item</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.descricao)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.descricao)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.qntdeunitario)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.qntdeunitario)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.valorunitario)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.valorunitario)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.situacao)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @{
+                                string situacaoText = "";
+                                switch (Model.situacao)
+                                {
+                                    case "1":
+                                        situacaoText = "Liberado";
+                                        break;
+                                    case "2":
+                                        situacaoText = "Pendente";
+                                        break;
+                                    case "3":
+                                        situacaoText = "Bloqueado";
+                                        break;
+                                    default:
+                                        situacaoText = "Desconhecido";
+                                        break;
+                                }
+                            }
+                            @situacaoText
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.armazem)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.armazem.nome)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.tipo)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.tipo.nome)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

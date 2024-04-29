@@ -1,0 +1,45 @@
+@model EspacoPotencial.Models.SalaAulaModel
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <form asp-action="Aula" method="get" class="form-inline d-flex">
+        <div class="form-group mr-2" style="margin-left:1em">
+            <label for="search">Pesquisar</label>
+            <input type="text" class="form-control" id="search" name="search" placeholder="Nome da sala">
+        </div>
+    
+    </form> 
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sala</th>
+                <th>Aluno</th>
+                <th>Professor</th>
+                <th>Responsavel</th>
+                <th>Telefone Responsavel</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model.Resultados)
+            {
+                
+                <tr>
+                    <td>@aluno.NomeSala</td>
+                    <td>@aluno.NomeUsario</td>
+                    <td>@aluno.NomeProfessor</td>
+                    <td>@aluno.NomeResponsavel</td>
+                    <td>@aluno.TelefoneResponsavel</td>
+                    <td>
+                        <a asp-action="Chamada" asp-route-IdSala="@aluno.IdSala" class="btn btn-primary btn-sm"><i class="fas fa-chalkboard-teacher"></i> Chamada</a>
+                        <a asp-area="Cadastro" asp-controller="SalaDiario" asp-action="Create" asp-route-salaId="@aluno.IdSala"  asp-route-CodPeriodo="@aluno.CodPeriodo"  class="btn btn-primary btn-sm"><i class="far fa-calendar-alt"></i> Anotações Diárias</a>         
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,64 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.frequencia
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes da Frequência</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Frequência</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Sala.Nome)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Sala.Nome)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.usuario_id)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.usuario_id)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Data)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Data)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Registro)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @if (Model.Registro)
+                            {
+                                <text>Presente</text>
+                            }
+                            else
+                            {
+                                <text>Faltou</text>
+                            }
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Observacao)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Observacao)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

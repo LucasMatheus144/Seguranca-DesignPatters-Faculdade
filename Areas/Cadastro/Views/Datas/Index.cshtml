@@ -1,0 +1,78 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Usuarios.datas>
+
+@{
+    ViewData["Title"] = "Listagem";
+}
+
+<h1>Listagem de Datas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Cadastro Datas</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descritivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFinal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                @{
+                    string tipoDisplay = string.Empty;
+                    switch (item.Tipo)
+                    {
+                        case "1":
+                            tipoDisplay = "Feriado";
+                            break;
+                        case "2":
+                            tipoDisplay = "Recesso";
+                            break;
+                        case "3":
+                            tipoDisplay = "Planejamento";
+                            break;
+                        default:
+                            tipoDisplay = item.Tipo.ToString(); // Se o valor não corresponder a nenhum dos casos anteriores, exibe o valor original
+                            break;
+                    }
+                }
+
+                @tipoDisplay
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descritivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFinal)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

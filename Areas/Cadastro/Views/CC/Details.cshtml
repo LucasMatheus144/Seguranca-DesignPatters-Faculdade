@@ -1,0 +1,57 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.cc
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes da Conta Corrente</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Conta Corrente</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Conta de Origem:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.ContaCorrenteVendaIdOrigem)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Conta:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.ContaCorrenteVendaId)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Data:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.ContaCorrenteData)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Debito/Crédito:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.ContaCorrenteDebitoCredito)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Valor:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.ContaCorrenteValor)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

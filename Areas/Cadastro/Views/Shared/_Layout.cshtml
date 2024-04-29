@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] EspacoPotencial</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EspacoPotencial.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/detalhes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-5 nav custom-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a class="navbar-brand" asp-area="Cadastro" asp-controller="Area" asp-action="Menu">
+                    <i class="fas fa-book"></i> 
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between navbar__menus">
+                    @if (User.IsInRole("SuperUser") || (User.IsInRole("Admin")) ){
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Referente ao Usuario <span class="caret"></span></a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Geral" asp-action="Index">Teste</a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Beneficio" asp-action="Index">
+                                                <i class="fas fa-gift"></i> Beneficio
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Calendario" asp-action="Index">
+                                                <i class="fas fa-calendar"></i> Calendario
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="ComorbidadeUsuario" asp-action="Index">
+                                                <i class="fas fa-handshake"></i> Comorvidade Usuario
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Comorbidade" asp-action="Index">
+                                                <i class="fas fa-handshake"></i> Comorbidade
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Datas" asp-action="Index">
+                                                <i class="fas fa-calendar-day"></i> Datas
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="DiasTerapia" asp-action="Index">
+                                                <i class="fas fa-clipboard-list"></i> Dias Terapia
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="EducadorSala" asp-action="Index">
+                                                <i class="fas fa-chalkboard-teacher"></i> Educador Sala
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Escola" asp-action="Index">
+                                                <i class="fas fa-school"></i> Escola
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Frequencia" asp-action="Index">
+                                                <i class="fas fa-chart-line"></i> Frequencia
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="MotivoDesligamentoUsuario" asp-action="Index">
+                                                <i class="fas fa-sign-out-alt"></i> Motivo Desligamento
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Motorista" asp-action="Index">
+                                                <i class="fas fa-car"></i> Motorista
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Responsavel" asp-action="Index">
+                                                <i class="fas fa-user-friends"></i> Responsavel
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Sala" asp-action="Index">
+                                                <i class="fas fa-door-open"></i> Sala
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="SalaDiario" asp-action="Index">
+                                                <i class="fas fa-book"></i> Sala Diario
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Usuario_Motorista" asp-action="Index">
+                                                <i class="fas fa-user-tie"></i> Usuario Motorista
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="UsuarioSala" asp-action="Index">
+                                                <i class="fas fa-users"></i> Usuario Sala
+                                            </a>
+                                        </div>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Referente ao Funcionario <span class="caret"></span></a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="AtestadoMedico" asp-action="Index">
+                                                <i class="fas fa-file-medical"></i> Atestado Médico
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Banco" asp-action="Index">
+                                                <i class="fas fa-university"></i> Banco
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Cargos" asp-action="Index">
+                                                <i class="fas fa-briefcase"></i> Cargos
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="CargoFuncionario" asp-action="Index">
+                                                <i class="fas fa-user-tie"></i> Cargos do Funcionário
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="CentroCusto" asp-action="Index">
+                                                <i class="fas fa-building"></i> Centro Custo
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Cid" asp-action="Index">
+                                                <i class="fas fa-notes-medical"></i> Cid
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Epi" asp-action="Index">
+                                                <i class="fas fa-hard-hat"></i> Epi
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="EpiFuncionario" asp-action="Index">
+                                                <i class="fas fa-user-hard-hat"></i> Epi Funcionário
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="ExameMedico" asp-action="Index">
+                                                <i class="fas fa-stethoscope"></i> Exame Médico
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="MotivoDesligamento" asp-action="Index">
+                                                <i class="fas fa-sign-out-alt"></i> Motivo Desligamento
+                                            </a>
+                                        </div>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Referente ao financeiro <span class="caret"></span></a>
+                                        <div class="dropdown-menu  ">
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="GrupoPermitido" asp-action="Index">
+                                                <i class="fas fa-file-medical"></i> Grupo Permitido
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Eventos" asp-action="Index">
+                                                <i class="fas fa-calendar-alt"></i> Eventos
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="Produtos" asp-action="Index">
+                                                <i class="fas fa-box"></i> Produtos
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="ProdutosGeral" asp-action="Index">
+                                                <i class="fas fa-cube"></i> Produtos Geral
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="MovimentosProdutos" asp-action="Index">
+                                                <i class="fas fa-truck-loading"></i> Movimento Produtos
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="ProdutosEventos" asp-action="Index">
+                                                <i class="fas fa-calendar-plus"></i> Produtos Eventos
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="MovimentoVenda" asp-action="Index">
+                                                <i class="fas fa-cash-register"></i> Movimento Venda
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="CTAReceber" asp-action="Index">
+                                                <i class="fas fa-file-invoice-dollar"></i> CTA RECEBER
+                                            </a>
+                                            <a class="dropdown-item" asp-area="Cadastro" asp-controller="CC" asp-action="Index">
+                                                <i class="fas fa-file-invoice"></i> CC
+                                            </a>
+                                        </div>
+                                </li>
+                            </ul>
+                             <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Referente ao Estoque <span class="caret"></span></a>
+                                   <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="Tipo" asp-action="Index">
+                                            <i class="fas fa-calendar"></i> Tipo
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="Armazem" asp-action="Index">
+                                            <i class="fas fa-warehouse"></i> Armazém 
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="Item" asp-action="Index">
+                                            <i class="fas fa-box"></i> Item
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="MovimentacaoItem" asp-action="Index">
+                                            <i class="fas fa-exchange-alt"></i> Movimentação de Estoque
+                                        </a>
+                                    </div>
+
+                            </li>
+                        </ul>
+
+                    }else{
+                           <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Referente ao Usuario <span class="caret"></span></a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="Calendario" asp-action="Index">
+                                            <i class="fas fa-calendar"></i> Calendario
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="ComorbidadeUsuario" asp-action="Index">
+                                            <i class="fas fa-handshake"></i> Comorvidade Usuario
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="DiasTerapia" asp-action="Index">
+                                            <i class="fas fa-clipboard-list"></i> Dias Terapia
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="EducadorSala" asp-action="Index">
+                                            <i class="fas fa-chalkboard-teacher"></i> Educador Sala
+                                        </a>
+
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="Frequencia" asp-action="Index">
+                                            <i class="fas fa-chart-line"></i> Frequencia
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="Responsavel" asp-action="Index">
+                                            <i class="fas fa-user-friends"></i> Responsavel
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="SalaDiario" asp-action="Index">
+                                            <i class="fas fa-book"></i> Sala Diario
+                                        </a>
+                                        <a class="dropdown-item" asp-area="Cadastro" asp-controller="UsuarioSala" asp-action="Index">
+                                            <i class="fas fa-users"></i> Usuario Sala
+                                        </a>
+                                    </div>
+                            </li>
+                        </ul>
+                    }
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown">@User.Identity.Name <span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Logout">Sair</a>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+
+
+     <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

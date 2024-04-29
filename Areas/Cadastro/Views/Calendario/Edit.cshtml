@@ -1,0 +1,37 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.calendario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edição</h1>
+
+<h4>calendario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="sala_id" class="control-label"></label>
+                <select asp-for="sala_id" class ="form-control" asp-items="ViewBag.sala_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="datas_id" class="control-label"></label>
+                <select asp-for="datas_id" class="form-control" asp-items="ViewBag.datas_id"></select>
+                <span asp-validation-for="datas_id" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                 <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar para a listagem</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

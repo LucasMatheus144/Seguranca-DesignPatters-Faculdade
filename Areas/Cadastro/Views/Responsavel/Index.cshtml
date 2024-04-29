@@ -1,0 +1,88 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Usuarios.responsavel>
+
+@{
+    ViewData["Title"] = "Listagem";
+}
+
+<h1>Listagem de Responsavel</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Criar Responsavel</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vinculo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalTrabalho)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Retira)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Funcionario.geral.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Geral.Nome)
+            </td>
+           <td>
+                @if (item.Vinculo == "1")
+                {
+                    <text>Responsável Principal</text>
+                }
+                else if (item.Vinculo == "2")
+                {
+                    <text>Vinculado</text>
+                }
+                else
+                {
+                    <text>Valor Desconhecido</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalTrabalho)
+            </td>
+            <td>
+                @if (item.Retira == "1")
+                {
+                    <text>Sim</text>
+                }
+                else if (item.Retira == "2")
+                {
+                    <text>Não</text>
+                }
+                else
+                {
+                    <text>Valor Desconhecido</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacao)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

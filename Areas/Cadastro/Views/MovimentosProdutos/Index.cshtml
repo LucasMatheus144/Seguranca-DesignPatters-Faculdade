@@ -1,0 +1,67 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimento_produtos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listagem de Movimento Protuos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Criar</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_geral_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_evento_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutosQuantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutosValorUnitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutosValorTotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_geral_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_evento_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutosQuantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutosValorUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutosValorTotal)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.movimento_id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.movimento_id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.movimento_id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+@*
+<a asp-action="Details" asp-route-id="@item.MovimentoId" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.MovimentoId" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.MovimentoId" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>               
+*@

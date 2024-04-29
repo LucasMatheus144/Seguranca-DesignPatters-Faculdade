@@ -1,0 +1,389 @@
+﻿@model EspacoPotencial.Models.CreateViewModel
+
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+    var errorMessage = TempData["ErrorMessage"] as string;
+}
+
+<link rel="stylesheet" href="~/css/cadastro.css">
+<link rel="stylesheet" href="~/css/homepage.css">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+<script src="~/js/homepage.js"></script>
+<script src="~/js/mascaras.js"></script>
+
+
+
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+     @if (User.IsInRole("SuperUser") || User.IsInRole("Admin"))
+    {
+        <button class="pop btn btn-primary btn-sm">Novo Cadastro</button>
+    }
+
+</div>
+
+<div class="table-responsive">
+    <table id = "Cadastro" class="table">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                @if (User.IsInRole("SuperUser"))
+                {
+                    <th>Ações</th>
+                }
+            </tr>
+        </thead>
+         <tbody>
+             @foreach (var item in Model.Resultados)
+            {
+                <tr>
+                    <td class="table-cell">
+                        @if (item.Foto != null)
+                        {
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Foto)" alt="Foto"  class="img-custom" />
+                        }
+                        else
+                        {
+                            @("∅")
+                        }
+                    </td>
+                    <td class="table-cell">@item.Nome</td>
+                    <td class="table-cell">@item.Email</td>
+                    <td class="table-cell">
+                        @{
+                            string tipoText;
+                            switch (item.Tipo)
+                            {
+                                case "1":
+                                    tipoText = "Funcionário";
+                                    break;
+                                case "2":
+                                    tipoText = "Usuário";
+                                    break;
+                                case "3":
+                                    tipoText = "Responsável";
+                                    break;
+                                case "4":
+                                    tipoText = "Terceiro";
+                                    break;
+                                default:
+                                    tipoText = "Desconhecido";
+                                    break;
+                            }
+                            @tipoText
+                        }
+                    </td>
+                    @if (User.IsInRole("SuperUser"))
+                    {
+                        <td class="table-cell">
+                            <a asp-action="Editar" asp-route-id="@item.GeralId" class="pop btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                        </td>
+                    }
+                    
+                </tr>        
+            }
+    </tbody>
+    </table>
+</div>
+
+
+
+
+@if(TempData["successMessage"] != null)
+{
+    <div id = "Alert" class="alert alert-success" >
+        @TempData["successMessage"]
+    </div>
+}
+
+@if(TempData["ErrorMessage"] != null)
+{
+    <div id="Alert" class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div id="Alert" class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+@if(TempData["ErrorAcesso"] != null)
+{
+    <div id="Alert" class="alert alert-danger">
+        @TempData["ErrorAcesso"]
+    </div>
+}
+
+
+<div class="wrapper">
+    <div class="step-row">
+        <div id="progress"></div>
+        <span class="icon-close"><ion-icon name='close'></ion-icon></span>
+        <div class="step-col"><small>Principal</small></div>
+        <div class="step-col"><small>Endereço</small></div>
+
+    </div>
+    <form asp-controller="HomeController" asp-action="Cadastro" method="post" enctype="multipart/form-data"> 
+        <fieldset id="principal">
+            <h3>Principal </h3>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Nome" class="control-label"></label>
+                    <input asp-for="GeralModel.Nome" class="form-control" />
+                    <span asp-validation-for="GeralModel.Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                <label class="control-label">Tipo</label>
+                <select asp-for="GeralModel.Tipo" class="form-control"  id="geral_tipo_select">
+                        <option value="1">Funcionário</option>
+                        <option value="2">Usuário</option>
+                        <option value="3">Responsável</option>
+                        <option value="4">Terceiro</option>
+                    </select>
+                    <span asp-validation-for="GeralModel.Tipo" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <label asp-for="GeralModel.Situacao" class="control-label"></label>
+                <select asp-for="GeralModel.Situacao" class="form-control">
+                    <option value="1">Ativo</option>
+                    <option value="2">Inativo</option>
+                </select>
+                <span asp-validation-for="GeralModel.Situacao" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Docto" class="control-label"></label>
+                    <input asp-for="GeralModel.Docto" class="form-control" />
+                    <span asp-validation-for="GeralModel.Docto" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Telefone1" class="control-label"></label>
+                    <input asp-for="GeralModel.Telefone1" class="form-control" oninput="handlePhone(event)" />
+                    <span asp-validation-for="GeralModel.Telefone1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Telefone2" class="control-label"></label>
+                    <input asp-for="GeralModel.Telefone2" class="form-control" oninput="handlePhone(event)" />
+                    <span asp-validation-for="GeralModel.Telefone2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Email1" class="control-label"></label>
+                    <input asp-for="GeralModel.Email1" class="form-control" />
+                    <span asp-validation-for="GeralModel.Email1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Email2" class="control-label"></label>
+                    <input asp-for="GeralModel.Email2" class="form-control" />
+                    <span asp-validation-for="GeralModel.Email2" class="text-danger"></span>
+                </div>
+            <div class="btn-box">
+                <button type="submit" id="next-ende">Proximo</button>
+            </div>
+        </fieldset>
+        <fieldset id="endereco">
+            <h3>Endereço </h3>
+            <div class="form-group">
+                    <label asp-for="GeralModel.Endereco" class="control-label"></label>
+                    <input asp-for="GeralModel.Endereco" class="form-control" />
+                    <span asp-validation-for="GeralModel.Endereco" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Numero" class="control-label"></label>
+                    <input asp-for="GeralModel.Numero" class="form-control" />
+                    <span asp-validation-for="GeralModel.Numero" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Complemento" class="control-label"></label>
+                    <input asp-for="GeralModel.Complemento" class="form-control" />
+                    <span asp-validation-for="GeralModel.Complemento" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Cidade" class="control-label"></label>
+                    <input asp-for="GeralModel.Cidade" class="form-control" />
+                    <span asp-validation-for="GeralModel.Cidade" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Estado" class="control-label"></label>
+                    <input asp-for="GeralModel.Estado" class="form-control" />
+                    <span asp-validation-for="GeralModel.Estado" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GeralModel.Cep" class="control-label"></label>
+                    <input asp-for="GeralModel.Cep" class="form-control" oninput="handleCep(event)" />
+                    <span asp-validation-for="GeralModel.Cep" class="text-danger"></span>
+                </div>
+            <div class="btn-box">
+                <button type="button" id="back-princ">Voltar</button>
+                <button type="button" id="next-tela" asp-a>Proximo</button>
+            </div>
+        </fieldset>
+        <fieldset id="usuario">
+            <h3>Usuario </h3>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.ImagemFile" class="control-label"></label>
+                <input asp-for="UsuarioModel.ImagemFile" class="form-control" accept=".jpg, .jpeg, .png" />
+                <span asp-validation-for="UsuarioModel.ImagemFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.Nascimento" class="control-label"></label>
+                <input asp-for="UsuarioModel.Nascimento" class="form-control" />
+                <span asp-validation-for="UsuarioModel.Nascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.Serie" class="control-label"></label>
+                <input asp-for="UsuarioModel.Serie" class="form-control" />
+                <span asp-validation-for="UsuarioModel.Serie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.escolas_id" class="control-label"></label>
+                <select asp-for="UsuarioModel.escolas_id" class="form-control" asp-items="ViewBag.escolas_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.beneficio_id" class="control-label"></label>
+                <select asp-for="UsuarioModel.beneficio_id" class="form-control" asp-items="ViewBag.beneficio_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.Alergia" class="control-label"></label>
+                <input asp-for="UsuarioModel.Alergia" class="form-control" />
+                <span asp-validation-for="UsuarioModel.Alergia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.Medicacao" class="control-label"></label>
+                <input asp-for="UsuarioModel.Medicacao" class="form-control" />
+                <span asp-validation-for="UsuarioModel.Medicacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.RestricaoAlimentar" class="control-label"></label>
+                <input asp-for="UsuarioModel.RestricaoAlimentar" class="form-control" />
+                <span asp-validation-for="UsuarioModel.RestricaoAlimentar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.Transporte" class="control-label"></label>
+                <input asp-for="UsuarioModel.Transporte" class="form-control" />
+                <span asp-validation-for="UsuarioModel.Transporte" class="text-danger"></span>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="ende-back">Voltar</button>
+                <button type="button" id="next-info">Proximo</button>
+            </div>
+        </fieldset>
+        <fieldset id="info">
+        <h3>INFO </h3>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.Sus" class="control-label"></label>
+                    <input asp-for="UsuarioModel.Sus" class="form-control" />
+                    <span asp-validation-for="UsuarioModel.Sus" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.Ingresso" class="control-label"></label>
+                    <input asp-for="UsuarioModel.Ingresso" class="form-control" />
+                    <span asp-validation-for="UsuarioModel.Ingresso" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.DataLaudo" class="control-label"></label>
+                    <input asp-for="UsuarioModel.DataLaudo" class="form-control" />
+                    <span asp-validation-for="UsuarioModel.DataLaudo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.comorbidade_id" class="control-label"></label>
+                    <select asp-for="UsuarioModel.comorbidade_id" class="form-control"
+                        asp-items="ViewBag.comorbidade_id"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.HistoricoContato" class="control-label"></label>
+                    <input asp-for="UsuarioModel.HistoricoContato" class="form-control" />
+                    <span asp-validation-for="UsuarioModel.HistoricoContato" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.desligamento_id" class="control-label"></label>
+                    <select asp-for="UsuarioModel.desligamento_id" class="form-control"
+                        asp-items="ViewBag.desligamento_id"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.DataDesligamento" class="control-label"></label>
+                    <input asp-for="UsuarioModel.DataDesligamento" class="form-control" />
+                    <span asp-validation-for="UsuarioModel.DataDesligamento" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UsuarioModel.usuario_descritivo_desligamento" class="control-label"></label>
+                    <input asp-for="UsuarioModel.usuario_descritivo_desligamento" class="form-control" />
+                    <span asp-validation-for="UsuarioModel.usuario_descritivo_desligamento" class="text-danger"></span>
+                </div>
+                <div class="btn-box">
+                    <button type="button" id="back-usu">Voltar</button>
+                    <button type="submit" id="next-func"asp-action="Cadastro">Cadastrar</button>
+                </div>
+        </fieldset>
+        <fieldset id="funcionario">
+         <h3>Funcionario </h3>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.ImagemFile" class="control-label"></label>
+                <input asp-for="FuncionarioModel.ImagemFile" type="file" class="form-control" accept=".jpg, .jpeg, .png" />
+                <span asp-validation-for="FuncionarioModel.ImagemFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.Rg" class="control-label"></label>
+                <input asp-for="FuncionarioModel.Rg" class="form-control" oninput="handleRg(event)" />
+                <span asp-validation-for="FuncionarioModel.Rg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.Nascimento" class="control-label"></label>
+                <input asp-for="FuncionarioModel.Nascimento" class="form-control" />
+                <span asp-validation-for="FuncionarioModel.Nascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.centrocusto_id" class="control-label"></label>
+                <select asp-for="FuncionarioModel.centrocusto_id" class="form-control"
+                    asp-items="ViewBag.centrocusto_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.CestaBasica" class="control-label"></label>
+                <select asp-for="FuncionarioModel.CestaBasica" class="form-control">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+                <span asp-validation-for="FuncionarioModel.CestaBasica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.banco_id" class="control-label"></label>
+                <select asp-for="FuncionarioModel.banco_id" class="form-control" asp-items="ViewBag.banco_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.Agencia" class="control-label"></label>
+                <input asp-for="FuncionarioModel.Agencia" class="form-control"  oninput="handleAgency(event)" />
+                <span asp-validation-for="FuncionarioModel.Agencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.Conta" class="control-label"></label>
+                <input asp-for="FuncionarioModel.Conta" class="form-control" />
+                <span asp-validation-for="FuncionarioModel.Conta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.Escolaridade" class="control-label"></label>
+                <input asp-for="FuncionarioModel.Escolaridade" class="form-control"  oninput="handleEscolaridade(event)" />
+                <span asp-validation-for="FuncionarioModel.Escolaridade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuncionarioModel.Formacao" class="control-label"></label>
+                <input asp-for="FuncionarioModel.Formacao" class="form-control"  />
+                <span asp-validation-for="FuncionarioModel.Formacao" class="text-danger"></span>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="back-ende">Voltar</button>
+                <button type="submit" id="cadastrar" asp-action="Cadastro">Cadastrar</button>
+            </div>
+        </fieldset>
+   </form>
+    
+</div>
+
+
+
+
+

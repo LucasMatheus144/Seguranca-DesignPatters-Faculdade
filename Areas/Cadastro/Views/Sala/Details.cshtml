@@ -1,0 +1,51 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.sala
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes da Sala</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Periodo)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @if (Model.Periodo == "m") {
+                                <span>Manhã</span>
+                             } else if (Model.Periodo == "t") {
+                                <span>Tarde</span>
+                             } else {
+                                <span>Noite</span>
+                             }
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Funcionario)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Funcionario.geral.Nome)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a> 
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar para a listagem</a>
+</div>

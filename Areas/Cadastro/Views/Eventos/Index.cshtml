@@ -1,0 +1,48 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Financeiro.eventos>
+
+@{
+    ViewData["Title"] = "Eventos";
+}
+
+<h1>Listagem de Eventos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Criar novo Envento</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.evento_nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.evento_data_ini)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.evento_data_fin)
+            </th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.evento_nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.evento_data_ini)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.evento_data_fin)
+            </td>
+            <td>
+               <a asp-action="Details" asp-route-id="@item.eventos_id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+               <a asp-action="Edit" asp-route-id="@item.eventos_id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+               <a asp-action="Delete" asp-route-id="@item.eventos_id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

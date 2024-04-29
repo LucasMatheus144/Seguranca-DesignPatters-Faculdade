@@ -1,0 +1,63 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimentacao
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes da Movimentação</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.data_retirada)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.data_retirada)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.previsao_devolvido)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.previsao_devolvido)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.devolvido)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.devolvido)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.descricao)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.descricao)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.usuario)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.usuario.Geral.Nome)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.item)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.item.descricao)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

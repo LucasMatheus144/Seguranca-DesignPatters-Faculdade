@@ -1,0 +1,45 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.educador_sala
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Tem certeza que deseja excluir o Educador <strong>@Model.Funcionario.geral.Nome</strong></h3>
+<div>
+    <h4>educador_sala</h4>
+    <hr />
+    <dl class="row">
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.geral.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sala)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sala.Nome)
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Inicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Inicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final)
+        </dd>
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+    </form>
+</div>

@@ -1,0 +1,80 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.frequencia
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>frequencia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           <div class="form-group">
+                <label asp-for="sala_id" class="control-label"></label>
+                <select asp-for="sala_id" class="form-control" asp-items="ViewBag.sala_id"></select>
+            </div>
+             <div class="form-group">
+                <label asp-for="usuario_id" class="control-label"></label>
+                <select asp-for="usuario_id" class ="form-control" asp-items="ViewBag.usuarios"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label">Data</label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+           <div class="form-group">
+                <label asp-for="Registro" class="control-label">Registro</label>
+                <div class="form-check">
+                    <input type="checkbox" asp-for="Registro" class="form-check-input" id="presencaCheckbox" value="true" />
+                    <label class="form-check-label" for="presencaCheckbox">Presença</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="faltaCheckbox" value="false" />
+                    <label class="form-check-label" for="faltaCheckbox">Falta</label>
+                </div>
+                <span asp-validation-for="Registro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                 <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+<script>
+    function setupCheckboxes() {
+        const presencaCheckbox = document.getElementById('presencaCheckbox');
+        const faltaCheckbox = document.getElementById('faltaCheckbox');
+
+        presencaCheckbox.addEventListener('change', function() {
+            if (presencaCheckbox.checked) {
+                faltaCheckbox.checked = false;
+            }
+        });
+
+        faltaCheckbox.addEventListener('change', function() {
+            if (faltaCheckbox.checked) {
+                presencaCheckbox.checked = false;
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", setupCheckboxes);
+</script>

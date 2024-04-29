@@ -1,0 +1,11 @@
+@using Microsoft.AspNetCore.Identity
+@model IdentityUser
+
+<h2>Confirmar Exclusão</h2>
+
+<p>Você tem certeza de que deseja excluir o pergil acesso do <strong>@Model.UserName</strong>?</p>
+
+<form asp-action="ConfirmarExclusao" asp-route-id="@Model.Id" method="post">
+    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+    <a asp-action="ListagemAcesso" class="btn btn-secondary">Cancelar</a>
+</form>

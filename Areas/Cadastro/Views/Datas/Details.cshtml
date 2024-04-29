@@ -1,0 +1,67 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.datas
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes das Datas</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Datas</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Ano:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Ano)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Tipo:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @{
+                                Dictionary<string, string> tipoDisplayMap = new Dictionary<string, string>()
+                                {
+                                    { "1", "Feriado" },
+                                    { "2", "Recesso" },
+                                    { "3", "Planejamento" }
+                                };
+
+                                string tipoDisplay = tipoDisplayMap.ContainsKey(Model.Tipo) ? tipoDisplayMap[Model.Tipo] : Model.Tipo.ToString();
+                            }
+                            @tipoDisplay
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Descritivo:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Descritivo)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Data de Início:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.DataInicio)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Data Final:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.DataFinal)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

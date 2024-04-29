@@ -1,0 +1,139 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Usuarios.usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Situacao)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Sus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingresso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLaudo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HistoricoContato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDesligamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usuario_descritivo_desligamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alergia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medicacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RestricaoAlimentar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Escola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beneficio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comorbidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotivoDesligamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Geral)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Situacao)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Sus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingresso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLaudo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HistoricoContato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDesligamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuario_descritivo_desligamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alergia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medicacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestricaoAlimentar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transporte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Escola.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Beneficio.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comorbidade.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotivoDesligamento.Motivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Geral.Cep)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

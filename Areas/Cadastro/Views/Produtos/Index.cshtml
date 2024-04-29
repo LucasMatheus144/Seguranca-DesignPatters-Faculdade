@@ -1,0 +1,78 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Financeiro.produtos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listagem de Produtos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Criar Produto</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.produtos_descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produtos_unidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produtos_qtde_unit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produtos_evento)
+            </th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.produtos_descricao)
+            </td>
+           <td>
+                @if (item.produtos_unidade == "U")
+                {
+                    <text>Unidade</text>
+                }
+                else if (item.produtos_unidade == "Kg")
+                {
+                    <text>Quilo</text>
+                }
+                else if (item.produtos_unidade == "L")
+                {
+                    <text>Litro</text>
+                }
+                else
+                {
+                    <text>Sem medida</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produtos_qtde_unit)
+            </td>
+            <td>
+                @if (item.produtos_evento == "S")
+                {
+                    <text>Sim</text>
+                }
+                else
+                {
+                    <text>Não</text>
+                }
+            </td>
+
+
+            <td>
+                <a asp-action="Details" asp-route-id="@item.produtos_id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.produtos_id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.produtos_id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

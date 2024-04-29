@@ -1,0 +1,51 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.usuario_motorista
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Exclusao</h1>
+<h3>Tem certeza que deseja excluir o <strong>@Model.Motorista.Nome</strong> do usuario <strong></strong>@Model.Usuario.Geral.Nome</strong> ?</h3>
+<div>
+    <hr />
+    <dl class="row">
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Usuario.Geral.Nome)
+        </dd>
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Motorista)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Motorista.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataInicial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataInicial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataFinal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataFinal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Observacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Observacao)
+        </dd>
+       
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+    </form>
+</div>

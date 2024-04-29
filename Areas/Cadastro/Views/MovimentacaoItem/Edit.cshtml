@@ -1,0 +1,59 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimentacao
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>movimentacao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="item_id" class="control-label"></label>
+                <select asp-for="item_id" class="form-control" asp-items="ViewBag.item_id"></select>
+                <span asp-validation-for="item_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="usuario_id" class="control-label"></label>
+                <select asp-for="usuario_id" class="form-control" asp-items="ViewBag.usuario_id"></select>
+                <span asp-validation-for="usuario_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="data_retirada" class="control-label"></label>
+                <input asp-for="data_retirada" class="form-control" />
+                <span asp-validation-for="data_retirada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="previsao_devolvido" class="control-label"></label>
+                <input asp-for="previsao_devolvido" class="form-control" />
+                <span asp-validation-for="previsao_devolvido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="devolvido" class="control-label"></label>
+                <input asp-for="devolvido" class="form-control" />
+                <span asp-validation-for="devolvido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descricao" class="control-label"></label>
+                <input asp-for="descricao" class="form-control" />
+                <span asp-validation-for="descricao" class="text-danger"></span>
+            </div>
+           <br>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

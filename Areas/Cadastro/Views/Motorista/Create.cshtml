@@ -1,0 +1,93 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.motorista
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h1>Crição</h1>
+
+<h4>motorista</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Situacao" class="control-label"></label>
+                <select asp-for="Situacao" class="form-control">
+                    <option value="1">Ativo</option>
+                    <option value="2">Inativo</option>
+                </select>
+                <span asp-validation-for="Situacao" class="text-danger"></span>
+            </div>
+           <div class="form-group">
+                <label asp-for="Cpf" class="control-label"></label>
+                <input asp-for="Cpf" class="form-control" onblur="handleCpf(event)" />
+                <span asp-validation-for="Cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rg" class="control-label"></label>
+                <input asp-for="Rg" class="form-control" onblur="handleRg(event)" />
+                <span asp-validation-for="Rg" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlacaVeiculo" class="control-label"></label>
+                <input asp-for="PlacaVeiculo" class="form-control" />
+                <span asp-validation-for="PlacaVeiculo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CapacidadeVeiculo" class="control-label"></label>
+                <input asp-for="CapacidadeVeiculo" class="form-control" />
+                <span asp-validation-for="CapacidadeVeiculo" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                 <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+    const handleRg = (event) => {
+        let input = event.target;
+        input.value = formatRg(input.value);
+    };
+
+    const formatRg = (value) => {
+        if (!value) return "";
+        value = value.toUpperCase().replace(/[^\dX]/g, '');
+        return (value.length == 8 || value.length == 9) ?
+            value.replace(/^(\d{1,2})(\d{3})(\d{3})([\dX])$/, '$1.$2.$3-$4') :
+            value;
+    };
+
+    const formatCpf = (value) => {
+        if (!value) return "";
+        value = value.replace(/\D/g, '');
+        return value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+    };
+
+    const handleCpf = (event) => {
+        let input = event.target;
+        input.value = formatCpf(input.value);
+    };
+</script>

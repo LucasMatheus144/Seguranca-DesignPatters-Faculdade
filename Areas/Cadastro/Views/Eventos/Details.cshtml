@@ -1,0 +1,45 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.eventos
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes do Evento</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Evento</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3 text-muted">
+                            <strong>Nome do Evento:</strong>
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.evento_nome)
+                        </dd>
+                        <dt class="col-sm-3 text-muted">
+                            <strong>Data de Início:</strong>
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.evento_data_ini)
+                        </dd>
+                        <dt class="col-sm-3 text-muted">
+                            <strong>Data de Término:</strong>
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.evento_data_fin)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.eventos_id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

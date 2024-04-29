@@ -1,0 +1,51 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.dias_terapia
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastro</h1>
+
+<h4>dias_terapia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="geral_id" class="control-label"></label>
+                <select asp-for="geral_id" class ="form-control" asp-items="ViewBag.geral_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInicial" class="control-label"></label>
+                <input asp-for="DataInicial" class="form-control" />
+                <span asp-validation-for="DataInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataFinal" class="control-label"></label>
+                <input asp-for="DataFinal" class="form-control" />
+                <span asp-validation-for="DataFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Dias da Semana</label><br />
+                <input type="checkbox" class="form-check-input" asp-for="segunda" /> Segunda<br />
+                <input type="checkbox" class="form-check-input" asp-for="terca" /> Terça<br />
+                <input type="checkbox" class="form-check-input" asp-for="quarta" /> Quarta<br />
+                <input type="checkbox" class="form-check-input" asp-for="quinta" /> Quinta<br />
+                <input type="checkbox" class="form-check-input" asp-for="sexta" /> Sexta<br />
+                <span asp-validation-for="DiaSemana" class="text-danger"></span>
+            </div>
+
+            <br>
+           <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                 <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

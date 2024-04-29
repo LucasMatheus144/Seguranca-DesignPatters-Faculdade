@@ -1,0 +1,72 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.produtos
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes do Produto</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.produtos_descricao)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.produtos_descricao)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.produtos_unidade)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @{
+                                string unidadeText = "";
+                                switch (Model.produtos_unidade)
+                                {
+                                    case "U":
+                                        unidadeText = "Unidade";
+                                        break;
+                                    case "Kg":
+                                        unidadeText = "Quilo";
+                                        break;
+                                    case "L":
+                                        unidadeText = "Litro";
+                                        break;
+                                    default:
+                                        unidadeText = "Sem medida";
+                                        break;
+                                }
+                            }
+                            @unidadeText
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.produtos_qtde_unit)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.produtos_qtde_unit)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.produtos_evento)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @{
+                                string eventoText = Model.produtos_evento == "S" ? "Sim" : "Não";
+                            }
+                            @eventoText
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.produtos_id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

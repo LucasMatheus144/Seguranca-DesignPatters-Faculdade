@@ -1,0 +1,57 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimento_produtos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes do Movimento de Produtos</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.produto_geral_id)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.produto_geral_id)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.produto_evento_id)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.produto_evento_id)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.ProdutosQuantidade)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.ProdutosQuantidade)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.ProdutosValorUnitario)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.ProdutosValorUnitario)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.ProdutosValorTotal)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.ProdutosValorTotal)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.movimento_id" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

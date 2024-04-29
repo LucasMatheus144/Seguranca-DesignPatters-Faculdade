@@ -1,0 +1,221 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    background: transparent;
+}
+
+.wrapper {
+    position: absolute;
+    max-width: 700px;
+    max-height: 950px;
+    width: 100%;
+    height: 800px;
+    background: #fff;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #f26303;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    margin: 3% auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.15s;
+
+}
+
+.active-popup {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.nav-link {
+    font-family: 'Montserrat';
+}
+
+.custom-nav a {
+    font-family: 'Montserrat';
+}
+
+
+.hublogin .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background: black;
+    font-size: 1.8em;
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+.wrapper fieldset{
+    width: 50%;
+    position: absolute;  
+    top: 100px;
+    transition: 0.5s;
+}
+
+.step-row {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px ;
+    position: absolute;
+    top: 0;
+}
+
+.step-col {
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+
+/*
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, white, orange);
+}
+
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    position:absolute;
+    right: -20px;
+    top: 0;}
+
+
+*/
+    
+
+fieldset input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid blue;
+    outline: none;
+    background: transparent;
+}
+form fieldset h3{
+    align-items: center;
+}
+
+::placeholder {
+    color: aquamarine;
+}
+
+.btn-box {
+    width: 100%;
+    margin: 30px auto;
+    display: flex; 
+    justify-content: center; 
+}
+
+fieldset button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    margin-left: 40px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+fieldset button:hover {
+    color: white;
+    transition: .4s;
+}
+
+fieldset button:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 106px;
+    height: 31px;
+    background: #f26303;
+    border-radius: 4px;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+    transition: transform .5s;
+}
+
+fieldset button:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#principal {
+    left: 190px;
+}
+
+#endereco {
+    left: -600px;
+}
+
+ #usuario {
+    left: -600px;
+}
+
+#info {
+    left: -600px;
+}
+
+#funcionario {
+    left: -600px;
+}
+
+
+/* Foto */
+
+.img-custom {
+    width: 6em; /* largura da imagem */
+    height: 7em; /* altura da imagem */
+    border-radius: 8%;
+}
+
+
+
+/* Paginate */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    background: #f26303 !important;
+    border: 1px solid #000 !important;
+}

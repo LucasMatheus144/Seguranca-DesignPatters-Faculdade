@@ -1,0 +1,107 @@
+html {
+  font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    /*background: url('https://i.postimg.cc/hv8QNdY8/tela.png') no-repeat;*/
+    background-size: contain;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/*Css do dropdwon*/
+.navbar-nav .dropdown-item {
+  width: auto;
+  margin: 0;
+  background: transparent;
+}
+
+.navbar-nav .dropdown-item::after{
+  bottom: 0px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-item i {
+  margin-right: 10px;
+  width: 21px;
+  height: 20px;
+  text-align: center;
+}
+
+.form-group label {
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+/*Css do estilo das box*/
+/* Estilo para a borda da caixa e a cor de fundo quando focada */
+.form-control:focus {
+  border-color: #f26303 !important; 
+  box-shadow: none; 
+}
+
+/* Estilo para a caixa de entrada */
+.form-control {
+  border-color: #f26303; 
+  background-color: #fff; 
+}
+
+/**/
+.container .table{
+  background-color: transparent /* Define o fundo como transparente */
+  /* Outras propriedades CSS para o container */
+}
+
+
+/* Navbar */
+.navbar-brand {
+  margin: 0 20px !important;
+}
+
+.navbar__menus {
+  margin-left: 60px;
+}
+
+.navbar-nav {
+  gap: 40px;
+  margin-left: 20px;
+}
+
+
+/* Paginate */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #fff !important;
+  background: #f26303;
+  border: 1px solid #000;
+}
+
+/* Forms Wrap */
+
+.form__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  align-items: center;
+}
+
+.form-submit {
+  margin: 20px 0 0;
+  text-align: right;
+}

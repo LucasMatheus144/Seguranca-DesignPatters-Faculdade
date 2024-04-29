@@ -1,0 +1,33 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Funcionarios.cargos
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes do Cargo</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Cargo</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Nome:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

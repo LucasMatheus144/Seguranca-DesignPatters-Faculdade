@@ -1,0 +1,49 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.cta_receber
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-5 text-danger">Confirmação de Exclusão</h1>
+                    <h3 class="text-center mb-4">Tem certeza que deseja excluir este item?</h3>
+
+                    <div class="mt-4">
+                        <h4 class="mb-3">Detalhes do Item</h4>
+                        <hr />
+                        <dl class="row">
+                            <dt class="col-sm-2 text-muted">ID do Movimento:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.MovimentoId)</dd>
+                            <dt class="col-sm-2 text-muted">Tipo do Movimento:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.MovimentoTipo)</dd>
+                            <dt class="col-sm-2 text-muted">Parcelas do Movimento:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.MovimentoParcelas)</dd>
+                            <dt class="col-sm-2 text-muted">Conta de Pagamento:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.CtaPagamento)</dd>
+                            <dt class="col-sm-2 text-muted">Valor:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.CtaValor)</dd>
+                            <dt class="col-sm-2 text-muted">Multa:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.CtaMulta)</dd>
+                            <dt class="col-sm-2 text-muted">Juros:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.CtaJuros)</dd>
+                            <dt class="col-sm-2 text-muted">Baixa:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.CtaReceberBaixa)</dd>
+                        </dl>
+
+                        <div class="text-center mt-5">
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="ContaReceberId" />
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Confirmar Exclusão</button>
+                                <a asp-action="Index" class="btn btn-outline-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

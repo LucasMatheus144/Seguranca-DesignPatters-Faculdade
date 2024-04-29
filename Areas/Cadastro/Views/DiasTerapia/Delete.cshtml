@@ -1,0 +1,71 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.dias_terapia
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@functions {
+    public string ExibirDiasDaSemana(int diaSemana)
+    {
+        var diasExibidos = new List<string>();
+
+        if ((diaSemana & 1) == 1)
+        {
+            diasExibidos.Add("Segunda");
+        }
+        if ((diaSemana & 4) == 4)
+        {
+            diasExibidos.Add("Terça");
+        }
+        if ((diaSemana & 8) == 8)
+        {
+            diasExibidos.Add("Quarta");
+        }
+        if ((diaSemana & 16) == 16)
+        {
+            diasExibidos.Add("Quinta");
+        }
+        if ((diaSemana & 32) == 32)
+        {
+            diasExibidos.Add("Sexta");
+        }
+
+        return string.Join(" / ", diasExibidos);
+    }
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-5 text-danger">Confirmação de Exclusão</h1>
+                    <h3 class="text-center mb-4">Tem certeza que deseja excluir a data de terapia do usuário <strong>@Model.Geral.Nome</strong>?</h3>
+
+                    <div class="mt-4">
+                        <h4 class="mb-3">Detalhes da Data de Terapia</h4>
+                        <hr />
+                        <dl class="row">
+                            <dt class="col-sm-3 text-muted">Nome do Usuário:</dt>
+                            <dd class="col-sm-9">@Html.DisplayFor(model => model.Geral.Nome)</dd>
+                            <dt class="col-sm-3 text-muted">Dias da Semana:</dt>
+                            <dd class="col-sm-9">@ExibirDiasDaSemana(Model.DiaSemana)</dd>
+                            <dt class="col-sm-3 text-muted">Data de Início:</dt>
+                            <dd class="col-sm-9">@Html.DisplayFor(model => model.DataInicial)</dd>
+                            <dt class="col-sm-3 text-muted">Data Final:</dt>
+                            <dd class="col-sm-9">@Html.DisplayFor(model => model.DataFinal)</dd>
+                        </dl>
+
+                        <div class="text-center mt-5">
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="Id" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

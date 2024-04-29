@@ -1,0 +1,61 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.item
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="estoque_id" class="control-label"></label>
+                <select asp-for="estoque_id" class="form-control" asp-items="ViewBag.estoque_id"></select>
+                <span asp-validation-for="estoque_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descricao" class="control-label"></label>
+                <input asp-for="descricao" class="form-control" />
+                <span asp-validation-for="descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qntdeunitario" class="control-label"></label>
+                <input asp-for="qntdeunitario" class="form-control" />
+                <span asp-validation-for="qntdeunitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="valorunitario" class="control-label"></label>
+                <input asp-for="valorunitario" class="form-control" />
+                <span asp-validation-for="valorunitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="situacao" class="control-label"></label>
+                <select asp-for="situacao" class="form-control">
+                    <option value="1">Liberado</option>
+                    <option value="2">Bloqueado</option>
+                </select>
+                <span asp-validation-for="situacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tipo_armazem" class="control-label"></label>
+                <select asp-for="tipo_armazem" class="form-control" asp-items="ViewBag.tipo_armazem"></select>
+                <span asp-validation-for="tipo_armazem" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

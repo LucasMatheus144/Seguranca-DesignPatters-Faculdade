@@ -1,0 +1,32 @@
+@using Microsoft.AspNetCore.Identity
+@model IdentityUser 
+
+<h2>Editar Usuário</h2>
+
+<form asp-action="AtualizarUsuario" asp-route-id="@Model.Id" method="post">
+    <div>
+        <label asp-for="UserName">Nome de Usuário:</label>
+        <input asp-for="UserName" class="form-control" required />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Email">E-mail:</label>
+        <input asp-for="Email" class="form-control" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+     <div>
+        <label for="RoleName">Permissão</label>
+        <select id="RoleName" name="roleName" class="form-control" required>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+            <option value="SuperUser">SuperUser</option>
+            <option value="Funcionarios">Funcionários</option>
+        </select>
+        <span class="text-danger"></span>
+    </div>
+
+    <br>
+    <button type="submit"  value="AtualizarUsuario" class="btn btn-primary">Atualizar</button>
+    <a asp-action="ListagemAcesso" class="btn btn-secondary">Cancelar</a>
+</form>

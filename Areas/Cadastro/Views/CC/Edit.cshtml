@@ -1,0 +1,54 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.cc
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>cc</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ContaCorrenteVendaIdOrigem" class="control-label"></label>
+                <input asp-for="ContaCorrenteVendaIdOrigem" class="form-control" />
+                <span asp-validation-for="ContaCorrenteVendaIdOrigem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaCorrenteVendaId" class="control-label"></label>
+                <input asp-for="ContaCorrenteVendaId" class="form-control" />
+                <span asp-validation-for="ContaCorrenteVendaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaCorrenteData" class="control-label"></label>
+                <input asp-for="ContaCorrenteData" class="form-control" />
+                <span asp-validation-for="ContaCorrenteData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaCorrenteDebitoCredito" class="control-label"></label>
+                <input asp-for="ContaCorrenteDebitoCredito" class="form-control" />
+                <span asp-validation-for="ContaCorrenteDebitoCredito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaCorrenteValor" class="control-label"></label>
+                <input asp-for="ContaCorrenteValor" class="form-control" />
+                <span asp-validation-for="ContaCorrenteValor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,78 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.motorista
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes do Motorista</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+                        <dt class="col-sm-3">
+                            Situação
+                        </dt>
+                        <dd class="col-sm-9">
+                            @{
+                                if (Model.Situacao == "1")
+                                {
+                                    <span class="badge badge-success">Ativo</span>
+                                }
+                                else if (Model.Situacao == "2")
+                                {
+                                    <span class="badge badge-secondary">Inativo</span>
+                                }
+                            }
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Cpf)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Cpf)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Rg)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Rg)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Observacao)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Observacao)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.PlacaVeiculo)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.PlacaVeiculo)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.CapacidadeVeiculo)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.CapacidadeVeiculo)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

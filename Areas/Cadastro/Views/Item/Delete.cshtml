@@ -1,0 +1,74 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.item
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Exclusao</h1>
+
+<h3>Tem certeza que deseja excluir o <strong>@Model.descricao</strong> do armazem <strong>@Model.armazem.nome</strong></h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.qntdeunitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.qntdeunitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.valorunitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.valorunitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.situacao)
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string situacaoText = "";
+                switch (Model.situacao)
+                {
+                    case "1":
+                        situacaoText = "Liberado";
+                        break;
+                    case "2":
+                        situacaoText = "Pendente";
+                        break;
+                    case "3":
+                        situacaoText = "Bloqueado";
+                        break;
+                    default:
+                        situacaoText = "Desconhecido";
+                        break;
+                }
+            }
+            @situacaoText
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.armazem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.armazem.nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tipo.nome)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+       <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary "><i class="fas fa-angle-double-left"></i> Voltar</a>
+    </form>
+</div>

@@ -1,0 +1,62 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.responsavel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastro</h1>
+
+<h4>responsavel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="funcionario_id" class="control-label"></label>
+                <select asp-for="funcionario_id" class ="form-control" asp-items="ViewBag.funcionarios"></select>
+            </div>
+           <div class="form-group">
+                <label asp-for="usuario_id" class="control-label"></label>
+                <select asp-for="usuario_id" class="form-control" asp-items="ViewBag.usuarios"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vinculo" class="control-label"></label>
+                <select asp-for="Vinculo" class="form-control">
+                    <option value="1">Responsável Principal</option>
+                    <option value="2">Vinculado</option>
+                </select>
+                <span asp-validation-for="Vinculo" class="text-danger"></span>
+            </div>   
+            <div class="form-group">
+                <label asp-for="LocalTrabalho" class="control-label"></label>
+                <input asp-for="LocalTrabalho" class="form-control" />
+                <span asp-validation-for="LocalTrabalho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Retira" class="control-label"></label>
+                <select asp-for="Retira" class="form-control">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+                <span asp-validation-for="Retira" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,75 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.cta_receber
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes do Contas a Receber</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Contas a Receber</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Movimento ID:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.MovimentoId)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Tipo de Movimento:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.MovimentoTipo)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Parcelas do Movimento:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.MovimentoParcelas)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Pagamento:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.CtaPagamento)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Valor:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.CtaValor)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Multa:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.CtaMulta)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Juros:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.CtaJuros)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Baixa do Recebimento:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.CtaReceberBaixa)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.ContaReceberId" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

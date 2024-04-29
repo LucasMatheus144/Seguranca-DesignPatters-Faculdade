@@ -1,0 +1,55 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Financeiro.armazem>
+
+@{
+    ViewData["Title"] = "Listagem";
+}
+
+<h1>Listagem de Armazem</h1>
+
+<p>
+    <a asp-action="Create"  class="btn btn-success btn-sm">Cadastrar Armazem</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.funcionario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.qntdelimite)
+            </th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+             <td>
+                @Html.DisplayFor(modelItem => item.funcionario.geral.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.qntdelimite)
+            </td>     
+            <td>
+                <a asp-action="Details" asp-route-id="@item.id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

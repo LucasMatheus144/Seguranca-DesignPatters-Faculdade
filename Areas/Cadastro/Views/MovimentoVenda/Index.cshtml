@@ -1,0 +1,144 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Financeiro.movimento_venda>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listabem de Movimento Venda</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Criar</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_outro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_parcelas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_dia_vencto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_tipo_pagto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.movimento_data_estorno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Geral)
+            </th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+           <td>
+                @{
+                    string tipo = "";
+                    switch (item.movimento_tipo)
+                    {
+                        case "1":
+                            tipo = "À vista";
+                            break;
+                        case "2":
+                            tipo = "À prazo";
+                            break;
+                        case "3":
+                            tipo = "Baixa Movto";
+                            break;
+                        case "4":
+                            tipo = "Baixa Parcial";
+                            break;
+                        case "5":
+                            tipo = "Estorno";
+                            break;
+                        default:
+                            tipo = "Desconhecido";
+                            break;
+                    }
+                }
+                @tipo
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_outro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_parcelas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_dia_vencto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_valor)
+            </td>
+            <td>
+                @{
+                    string tipoPagamento = "";
+                    switch (item.movimento_tipo_pagto)
+                    {
+                        case "1":
+                            tipoPagamento = "Dinheiro";
+                            break;
+                        case "2":
+                            tipoPagamento = "PIX";
+                            break;
+                        case "3":
+                            tipoPagamento = "Cartão Débito";
+                            break;
+                        case "4":
+                            tipoPagamento = "Cartão Crédito";
+                            break;
+                        case "5":
+                            tipoPagamento = "Cheque";
+                            break;
+                        case "6":
+                            tipoPagamento = "Depósito Bancário";
+                            break;
+                        default:
+                            tipoPagamento = "Desconhecido";
+                            break;
+                    }
+                }
+                @tipoPagamento
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movimento_data_estorno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Geral.Nome)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.movimento_id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.movimento_id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.movimento_id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

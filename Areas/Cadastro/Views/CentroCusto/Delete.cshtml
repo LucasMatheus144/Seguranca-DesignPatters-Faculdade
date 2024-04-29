@@ -1,0 +1,35 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Funcionarios.centro_custo
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-5 text-danger">Confirmação de Exclusão</h1>
+                    <h3 class="text-center mb-4">Tem certeza que deseja excluir o <strong>@Model.Nome</strong>?</h3>
+
+                    <div class="mt-4">
+                        <h4 class="mb-3">Detalhes do Centro de Custo</h4>
+                        <hr />
+                        <dl class="row">
+                            <dt class="col-sm-2 text-muted">Nome:</dt>
+                            <dd class="col-sm-10">@Html.DisplayFor(model => model.Nome)</dd>
+                        </dl>
+
+                        <div class="text-center mt-5">
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="Id" />
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Confirmar Exclusão</button>
+                                <a asp-action="Index" class="btn btn-outline-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Usuarios.salas_diario
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Detalhes das Salas Diário</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Sala)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Sala.Nome)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Periodo)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @{
+                                string periodoDisplay = string.Empty;
+                                switch (Model.Periodo)
+                                {
+                                    case "m":
+                                        periodoDisplay = "Manhã";
+                                        break;
+                                    case "t":
+                                        periodoDisplay = "Tarde";
+                                        break;
+                                    case "n":
+                                        periodoDisplay = "Noite";
+                                        break;
+                                    default:
+                                        periodoDisplay = Model.Periodo; // Se o valor for diferente de "M", "T" ou "N", apenas exibe o valor original
+                                        break;
+                                }
+                            }
+                            @periodoDisplay
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nota)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nota)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>

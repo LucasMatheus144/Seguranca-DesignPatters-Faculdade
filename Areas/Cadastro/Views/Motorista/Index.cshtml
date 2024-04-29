@@ -1,0 +1,78 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Usuarios.motorista>
+
+@{
+    ViewData["Title"] = "Listagem";
+}
+
+<h1>Listagem de Motorista</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Cadastro motorista</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Situacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacaVeiculo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CapacidadeVeiculo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+           <td>
+                @if (item.Situacao == "1")
+                {
+                    <text>Ativo</text>
+                }
+                else if (item.Situacao == "2")
+                {
+                    <text>Inativo</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaVeiculo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CapacidadeVeiculo)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

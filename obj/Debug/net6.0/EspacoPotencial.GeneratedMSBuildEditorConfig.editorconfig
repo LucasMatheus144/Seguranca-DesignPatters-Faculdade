@@ -1,0 +1,955 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EspacoPotencial
+build_property.RootNamespace = EspacoPotencial
+build_property.ProjectDir = C:\Users\Public\EspacoPotencial-master\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Public\EspacoPotencial-master
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Area/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXJlYVxNZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Armazem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXJtYXplbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Armazem/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXJtYXplbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Armazem/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXJtYXplbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Armazem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXJtYXplbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Armazem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXJtYXplbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/AtestadoMedico/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXRlc3RhZG9NZWRpY29cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/AtestadoMedico/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXRlc3RhZG9NZWRpY29cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/AtestadoMedico/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXRlc3RhZG9NZWRpY29cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/AtestadoMedico/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXRlc3RhZG9NZWRpY29cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/AtestadoMedico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQXRlc3RhZG9NZWRpY29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Banco/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmFuY29cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Banco/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmFuY29cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Banco/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmFuY29cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Banco/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmFuY29cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Banco/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmFuY29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Beneficio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmVuZWZpY2lvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Beneficio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmVuZWZpY2lvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Beneficio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmVuZWZpY2lvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Beneficio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmVuZWZpY2lvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Beneficio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQmVuZWZpY2lvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Calendario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FsZW5kYXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Calendario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FsZW5kYXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Calendario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FsZW5kYXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Calendario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FsZW5kYXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Calendario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FsZW5kYXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CargoFuncionario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29GdW5jaW9uYXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CargoFuncionario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29GdW5jaW9uYXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CargoFuncionario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29GdW5jaW9uYXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CargoFuncionario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29GdW5jaW9uYXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CargoFuncionario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29GdW5jaW9uYXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cargos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cargos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cargos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cargos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cargos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2FyZ29zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CC/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ0NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CC/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ0NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CC/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ0NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CC/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ0NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CC/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ0NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CentroCusto/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2VudHJvQ3VzdG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CentroCusto/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2VudHJvQ3VzdG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CentroCusto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2VudHJvQ3VzdG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CentroCusto/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2VudHJvQ3VzdG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CentroCusto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2VudHJvQ3VzdG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cid/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2lkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cid/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2lkXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cid/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2lkXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cid/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2lkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Cid/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ2lkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ComorbidadeUsuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVVc3VhcmlvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ComorbidadeUsuario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVVc3VhcmlvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ComorbidadeUsuario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVVc3VhcmlvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ComorbidadeUsuario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVVc3VhcmlvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ComorbidadeUsuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVVc3VhcmlvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Comorbidade/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Comorbidade/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Comorbidade/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Comorbidade/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Comorbidade/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29tb3JiaWRhZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Convenio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29udmVuaW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Convenio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29udmVuaW9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Convenio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29udmVuaW9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Convenio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29udmVuaW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Convenio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ29udmVuaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CTAReceber/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ1RBUmVjZWJlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CTAReceber/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ1RBUmVjZWJlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CTAReceber/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ1RBUmVjZWJlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CTAReceber/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ1RBUmVjZWJlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/CTAReceber/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcQ1RBUmVjZWJlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Datas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGF0YXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Datas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGF0YXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Datas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGF0YXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Datas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGF0YXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Datas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGF0YXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/DiasTerapia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGlhc1RlcmFwaWFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/DiasTerapia/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGlhc1RlcmFwaWFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/DiasTerapia/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGlhc1RlcmFwaWFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/DiasTerapia/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGlhc1RlcmFwaWFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/DiasTerapia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRGlhc1RlcmFwaWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EducadorSala/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRWR1Y2Fkb3JTYWxhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EducadorSala/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRWR1Y2Fkb3JTYWxhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EducadorSala/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRWR1Y2Fkb3JTYWxhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EducadorSala/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRWR1Y2Fkb3JTYWxhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EducadorSala/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRWR1Y2Fkb3JTYWxhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EpiFuncionario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpRnVuY2lvbmFyaW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EpiFuncionario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpRnVuY2lvbmFyaW9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EpiFuncionario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpRnVuY2lvbmFyaW9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EpiFuncionario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpRnVuY2lvbmFyaW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/EpiFuncionario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpRnVuY2lvbmFyaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Epi/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Epi/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Epi/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Epi/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Epi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXBpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Escola/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXNjb2xhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Escola/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXNjb2xhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Escola/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXNjb2xhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Escola/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXNjb2xhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Escola/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXNjb2xhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Eventos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXZlbnRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Eventos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXZlbnRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Eventos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXZlbnRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Eventos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXZlbnRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Eventos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXZlbnRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ExameMedico/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXhhbWVNZWRpY29cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ExameMedico/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXhhbWVNZWRpY29cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ExameMedico/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXhhbWVNZWRpY29cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ExameMedico/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXhhbWVNZWRpY29cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ExameMedico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRXhhbWVNZWRpY29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Frequencia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnJlcXVlbmNpYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Frequencia/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnJlcXVlbmNpYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Frequencia/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnJlcXVlbmNpYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Frequencia/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnJlcXVlbmNpYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Frequencia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnJlcXVlbmNpYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Funcionario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnVuY2lvbmFyaW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Funcionario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnVuY2lvbmFyaW9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Funcionario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnVuY2lvbmFyaW9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Funcionario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnVuY2lvbmFyaW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Funcionario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcRnVuY2lvbmFyaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Geral/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR2VyYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Geral/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR2VyYWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Geral/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR2VyYWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Geral/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR2VyYWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Geral/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR2VyYWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/GrupoPermitido/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR3J1cG9QZXJtaXRpZG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/GrupoPermitido/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR3J1cG9QZXJtaXRpZG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/GrupoPermitido/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR3J1cG9QZXJtaXRpZG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/GrupoPermitido/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR3J1cG9QZXJtaXRpZG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/GrupoPermitido/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcR3J1cG9QZXJtaXRpZG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Item/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcSXRlbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Item/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcSXRlbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Item/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcSXRlbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Item/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcSXRlbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Item/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcSXRlbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamentoUsuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvVXN1YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamentoUsuario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvVXN1YXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamentoUsuario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvVXN1YXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamentoUsuario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvVXN1YXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamentoUsuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamento/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamento/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamento/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamento/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MotivoDesligamento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90aXZvRGVzbGlnYW1lbnRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Motorista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90b3Jpc3RhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Motorista/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90b3Jpc3RhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Motorista/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90b3Jpc3RhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Motorista/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90b3Jpc3RhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Motorista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW90b3Jpc3RhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentacaoItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRhY2FvSXRlbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentacaoItem/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRhY2FvSXRlbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentacaoItem/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRhY2FvSXRlbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentacaoItem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRhY2FvSXRlbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentacaoItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRhY2FvSXRlbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentosProdutos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvc1Byb2R1dG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentosProdutos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvc1Byb2R1dG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentosProdutos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvc1Byb2R1dG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentosProdutos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvc1Byb2R1dG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentosProdutos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvc1Byb2R1dG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentoVenda/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvVmVuZGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentoVenda/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvVmVuZGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentoVenda/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvVmVuZGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentoVenda/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvVmVuZGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/MovimentoVenda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcTW92aW1lbnRvVmVuZGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosEventos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NFdmVudG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosEventos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NFdmVudG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosEventos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NFdmVudG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosEventos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NFdmVudG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosEventos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NFdmVudG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosGeral/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NHZXJhbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosGeral/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NHZXJhbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosGeral/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NHZXJhbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosGeral/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NHZXJhbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/ProdutosGeral/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NHZXJhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Produtos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Produtos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Produtos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Produtos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Produtos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUHJvZHV0b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Responsavel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUmVzcG9uc2F2ZWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Responsavel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUmVzcG9uc2F2ZWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Responsavel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUmVzcG9uc2F2ZWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Responsavel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUmVzcG9uc2F2ZWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Responsavel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcUmVzcG9uc2F2ZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/SalaDiario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYURpYXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/SalaDiario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYURpYXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/SalaDiario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYURpYXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/SalaDiario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYURpYXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/SalaDiario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYURpYXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Sala/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Sala/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Sala/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Sala/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Sala/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2FsYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Shared/_Vazio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2hhcmVkXF9WYXppby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Tipo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVGlwb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Tipo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVGlwb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Tipo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVGlwb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Tipo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVGlwb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Tipo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVGlwb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/UsuarioSala/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1NhbGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/UsuarioSala/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1NhbGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/UsuarioSala/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1NhbGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/UsuarioSala/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1NhbGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/UsuarioSala/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1NhbGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario_Motorista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb19Nb3RvcmlzdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario_Motorista/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb19Nb3RvcmlzdGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario_Motorista/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb19Nb3RvcmlzdGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario_Motorista/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb19Nb3RvcmlzdGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Usuario_Motorista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcVXN1YXJpb19Nb3RvcmlzdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Account/Acesso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Vzc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Account/EdicaoAcesso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGljYW9BY2Vzc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Account/ExclusaoAcesso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFeGNsdXNhb0FjZXNzby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Account/ListagemAcesso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMaXN0YWdlbUFjZXNzby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/SalaAula/Aula.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYUF1bGFcQXVsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/SalaAula/Chamada.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYUF1bGFcQ2hhbWFkYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/Shared/_Vazio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYXppby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Public/EspacoPotencial-master/Areas/Cadastro/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2FkYXN0cm9cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-qnhg1vt8sy
+
+[C:/Users/Public/EspacoPotencial-master/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-56d3u5ww9c

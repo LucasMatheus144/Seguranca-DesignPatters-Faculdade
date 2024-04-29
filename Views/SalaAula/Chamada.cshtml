@@ -1,0 +1,82 @@
+@model EspacoPotencial.Models.ChamadaViewModel
+
+@{
+    var aluno = ViewData["ChamadaData"] as ChamadaViewModel;
+}
+
+<form method="post" asp-controller="SalaDeAula" asp-action="Chamada">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sala</th>
+                    <th>Aluno</th>
+                    <th>Identificado Aluno</th>
+                    <th>Observação</th>
+                    <th>Presença</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < Model.Resultados.Count; i++)
+                {
+                    var item = Model.Resultados[i];
+                    var presencaCheckboxId = "presencaCheckbox_" + item.Id;
+                    var faltaCheckboxId = "faltaCheckbox_" + item.Id;
+
+                    <tr>
+                        <td>@item.NomeSala</td>
+                        <td>@item.NomeUsario</td>
+                        <td>@item.UsuarioId</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="hidden" name="IdSala" value="@aluno.Resultados[0].IdSala">
+                                <input type="hidden" name="chamadas[@i].UsuarioId" value="@item.UsuarioId" />
+                                <input type="text" name="chamadas[@i].Observacao" class="form-control" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline" style="margin-right: 5px;">
+                                    <input type="checkbox" name="chamadas[@i].Registro" class="form-check-input" id="@presencaCheckboxId" value="true" />
+                                    <label class="form-check-label" for="@presencaCheckboxId">Presença</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" name="chamadas[@i].Registro" class="form-check-input" id="@faltaCheckboxId" value="false" />
+                                    <label class="form-check-label" for="@faltaCheckboxId">Falta</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <button type="submit" class="btn btn-success btn-sm" asp-action="Chamada">Salvar Chamada</button>
+</form>
+
+<script>
+    function setupCheckboxes() {
+        const presencaCheckboxes = document.querySelectorAll('.form-check-input[id^="presencaCheckbox"]');
+        const faltaCheckboxes = document.querySelectorAll('.form-check-input[id^="faltaCheckbox"]');
+
+        presencaCheckboxes.forEach(function(presencaCheckbox) {
+            presencaCheckbox.addEventListener('change', function() {
+                const faltaCheckbox = document.getElementById(`faltaCheckbox_${presencaCheckbox.id.split('_')[1]}`);
+                if (presencaCheckbox.checked) {
+                    faltaCheckbox.checked = false;
+                }
+            });
+        });
+
+        faltaCheckboxes.forEach(function(faltaCheckbox) {
+            faltaCheckbox.addEventListener('change', function() {
+                const presencaCheckbox = document.getElementById(`presencaCheckbox_${faltaCheckbox.id.split('_')[1]}`);
+                if (faltaCheckbox.checked) {
+                    presencaCheckbox.checked = false;
+                }
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", setupCheckboxes);
+</script>

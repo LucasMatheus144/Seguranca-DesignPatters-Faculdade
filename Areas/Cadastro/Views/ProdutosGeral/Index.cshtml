@@ -1,0 +1,47 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Financeiro.produtos_geral>
+
+@{
+    ViewData["Title"] = "ProdutosGeral";
+}
+
+<h1>Listagem de Produtos Geral</h1>
+
+<p>
+     <a asp-action="Create" class="btn btn-success btn-sm">Criar</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_geral_valor_uni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GrupoPermitido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_geral_valor_uni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GrupoPermitido.grp_descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produto.produtos_descricao)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.produto_geral_id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                <a asp-action="Edit" asp-route-id="@item.produto_geral_id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.produto_geral_id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a>               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

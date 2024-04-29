@@ -1,0 +1,91 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Funcionarios.funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Rg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CestaBasica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Conta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Escolaridade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.centro_custo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.banco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CestaBasica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Escolaridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Formacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geral.Cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.centro_custo.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.banco.Nome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

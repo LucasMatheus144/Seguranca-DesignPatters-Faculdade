@@ -1,0 +1,83 @@
+@model IEnumerable<EspacoPotencial.Areas.Cadastro.Models.Usuarios.dias_terapia>
+
+@{
+    ViewData["Title"] = "Listagem";
+}
+ @functions {
+                    public string ExibirDiasDaSemana(int diaSemana)
+                    {
+                        var diasExibidos = new List<string>();
+
+                        if ((diaSemana & 1) == 1)
+                        {
+                            diasExibidos.Add("Segunda");
+                        }
+                        if ((diaSemana & 4) == 4)
+                        {
+                            diasExibidos.Add("Terça");
+                        }
+                        if ((diaSemana & 8) == 8)
+                        {
+                            diasExibidos.Add("Quarta");
+                        }
+                        if ((diaSemana & 16) == 16)
+                        {
+                            diasExibidos.Add("Quinta");
+                        }
+                        if ((diaSemana & 32) == 32)
+                        {
+                            diasExibidos.Add("Sexta");
+                        }
+
+                        return string.Join(" / ", diasExibidos);
+                    }
+                }
+
+<h1>Listagem de Dias Terapia</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success btn-sm">Cadastro de Dias Terapia</a>
+</p>
+<table class="table" id ="Cadastro">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.Geral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaSemana)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFinal)
+            </th>
+           
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Geral.Nome)
+                </td>
+                <td>
+                    @ExibirDiasDaSemana(item.DiaSemana)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataInicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataFinal)
+                </td>       
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm"> <i class="fas fa-info-circle"></i> Detalhes</a> 
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Editar</a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Excluir</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

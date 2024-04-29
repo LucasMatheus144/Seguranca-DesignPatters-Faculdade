@@ -1,0 +1,51 @@
+@model EspacoPotencial.Areas.Cadastro.Models.Financeiro.armazem
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="display-4 text-center mb-5">Detalhes do Armazém</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">Armazém</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Funcionário:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.funcionario.geral.Nome)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Tipo:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.tipo.nome)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Nome:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.nome)
+                        </dd>
+                        <dt class="col-sm-4 text-muted">
+                            <strong>Quantidade Limite:</strong>
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.qntdelimite)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary ml-3"><i class="fas fa-angle-double-left"></i> Voltar</a>
+</div>
