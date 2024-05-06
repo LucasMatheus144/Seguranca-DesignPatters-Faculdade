@@ -12,10 +12,10 @@
 3 -> Permissionamento de acesso
   - Foi desenvolvido um controle de permissao de acesso, onde cada perfil tem acesso exclusivo ao sistema.
     
-  3.1 - SuperUser -> Acesso total ao sistema, o diferencial é ter controle de acesso de perfils ao sistema.
+   3.1 - SuperUser -> Acesso total ao sistema, o diferencial é ter controle de acesso de perfils ao sistema.
     
-  3.2 - Admin -> Acesso a cadastro editar e excluir qualquer cadastro ao sistema.
+   3.2 - Admin -> Acesso a cadastro editar e excluir qualquer cadastro ao sistema.
   
-  3.3 - User -> Acesso somente a visualizar as informações da tela inicial.
+   3.3 - User -> Acesso somente a visualizar as informações da tela inicial.
   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/86082463-77c4-4427-9ec3-db97bca3c1fd)
 
