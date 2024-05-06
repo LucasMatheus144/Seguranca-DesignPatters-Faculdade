@@ -55,6 +55,11 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
  ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/545d1726-0fe4-4f65-bcf4-7c1b6f52d731)
  ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/1209d12a-79c5-462c-81ca-59d2f0b4af60)
 
+2.0 -> Pattern BUILDER
+ - Foi desenvolvido a classe chamada Geral e a classe Builderm qua qual o builder instancia a classe geral, logo após fomos no controller HomeController e na função que realiza o cadastro, instanciamos os campos de acordo com o BUILDER
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/2dfdc744-9cfa-4ebd-bb16-ded082b61caf)
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/041a5cad-7ddb-45b9-b148-7c0992ca940c)
+
 
 
 
