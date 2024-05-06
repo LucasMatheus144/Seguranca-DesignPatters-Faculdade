@@ -4,6 +4,10 @@
 
 1 -> Validações de login
   - Caso o usuario erra o login por mais de 3 vezes, o sistema bloqueia o login por 3 minutos
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/34520f11-de42-497c-b2e2-4e52801f4a3f)
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/0b074747-fcbb-4961-8bff-fcf157d4ccd0)
+
+
     
 2 -> Auditoria
   - Existe 3 auditorias das telas de cadastro, geral, usuario e funcionario, esssa auditoria alem de exibir quais campos foram alterado, tempos  o diferencial do Tipo Alteração(Insert / Update / Delete), horario da alteração e usuario que alterou
