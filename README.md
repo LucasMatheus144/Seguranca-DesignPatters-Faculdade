@@ -42,6 +42,6 @@
   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/7d384992-ebb2-42ac-9488-508a8d62e9dd)
 
   - Politica e privacidade da aplicação
-  ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/dda8c128-65ab-49e2-8e81-783da493d8e4)
+  ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/69cc0601-3125-42fb-a1bd-43ec97302bd7)
 
 
