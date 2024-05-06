@@ -48,3 +48,12 @@
 # EVERTON
 
 No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, builder patterns, observer patterns e o state patterns
+
+1.0 -> Pattern STATE
+ - Foi criado a classe StateItem, onde é validado os tipo do armazem com o tipo do item. Se o armazem for null ou armazem diferente do tipo item -> o sistema trava e nao deixa caso contrario -> valido
+ ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/274938d2-792c-4d96-94e2-c6f958736bdb)
+ ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/545d1726-0fe4-4f65-bcf4-7c1b6f52d731)
+ ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/39a560f0-ce5d-4dcc-a271-83c295f5b52e)
+
+
+
