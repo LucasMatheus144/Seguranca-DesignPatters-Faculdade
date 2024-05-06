@@ -1,6 +1,6 @@
 # Seguranca-DesignPatters-Faculdade
 
-                                                                                                                          # MARCONATO
+                                                                                     # MARCONATO
 
 1 -> Validações de login
   - Caso o usuario erra o login por mais de 3 vezes, o sistema bloqueia o login por 3 minutos
