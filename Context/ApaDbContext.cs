@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using EspacoPotencial.Areas.Cadastro.Models;
 using EspacoPotencial.Areas.Cadastro.Models.Financeiro;
+using EspacoPotencial.Models.Account;
 
 
 namespace EspacoPotencial.Context
@@ -27,6 +28,7 @@ namespace EspacoPotencial.Context
                 }
             }
         }
+        public DbSet<AcessUsers> AcessUsers { get; set; }
         public DbSet<EspacoPotencial.Areas.Cadastro.Models.Public.geral> geral { get; set; }
         public DbSet<EspacoPotencial.Areas.Cadastro.Models.Funcionarios.cid> cid { get; set; }
         public DbSet<EspacoPotencial.Areas.Cadastro.Models.Funcionarios.centro_custo> centro_custo { get; set; }

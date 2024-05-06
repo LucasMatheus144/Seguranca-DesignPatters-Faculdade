@@ -17,20 +17,22 @@ namespace Espacopotencial.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
+        private readonly ILoggingService _loggingService;
         private readonly ApaDbContext _context;
 
-
-
+        
 
         public AccountController(UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             RoleManager<IdentityRole> roleManager,
-            ApaDbContext context)
+            ApaDbContext context,
+            ILoggingService loggingService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _context = context;
+            _loggingService = loggingService;
             ;
 
         }
@@ -66,6 +68,7 @@ namespace Espacopotencial.Controllers
 
             if (result.Succeeded)
             {
+                await _loggingService.LogLoginAsync(user.Id, DateTime.Now);
                 var roles = await _userManager.GetRolesAsync(user);
                 return RedirectToAction("Index", "Home", new { roles = string.Join(",", roles) });
             }
@@ -140,11 +143,13 @@ namespace Espacopotencial.Controllers
             return View(registroVM);
         }
 
-
-
         [Authorize]
         public async Task<IActionResult> Logout()
         {
+            var userId = _userManager.GetUserId(User);
+
+            await _loggingService.LogLogoutAsync(userId, DateTime.Now);
+
             HttpContext.Session.Clear();
             HttpContext.User = null;
             await _signInManager.SignOutAsync();
@@ -245,9 +250,6 @@ namespace Espacopotencial.Controllers
             var usuario = await _userManager.FindByIdAsync(id);
             return View(usuario);
         }
-
-
-
 
     }
 

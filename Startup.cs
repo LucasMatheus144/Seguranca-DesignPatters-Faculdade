@@ -1,5 +1,6 @@
 using System.Globalization;
 using EspacoPotencial.Context;
+using EspacoPotencial.Models.Account;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,8 @@ public class Startup
        .AddEntityFrameworkStores<ApaDbContext>()
                .AddDefaultTokenProviders();
 
+        services.AddScoped<ILoggingService, LoggingService>();
+
 
         // Configuração da autenticação de cookies
         services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -57,6 +60,7 @@ public class Startup
             options.Password.RequiredLength = 8;
         });
 
+        
         services.AddSession();
         services.AddMvc();
 
@@ -92,6 +96,8 @@ public class Startup
 
             await next();
         });
+
+        
 
 
         app.UseHttpsRedirection();
