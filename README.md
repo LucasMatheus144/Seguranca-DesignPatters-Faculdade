@@ -4,8 +4,7 @@
 
 1 -> Validações de login
   - Caso o usuario erra o login por mais de 3 vezes, o sistema bloqueia o login por 3 minutos
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/34520f11-de42-497c-b2e2-4e52801f4a3f)
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/0b074747-fcbb-4961-8bff-fcf157d4ccd0)
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/92e0c1a6-f5c4-4bf7-be93-3b2f827ca458) E ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/0b074747-fcbb-4961-8bff-fcf157d4ccd0)
 
 
     
