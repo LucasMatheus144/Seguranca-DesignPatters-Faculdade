@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using EspacoPotencial.Models.Observer;
 
 namespace EspacoPotencial.Areas.Cadastro.Models.Public
 {
@@ -85,17 +86,30 @@ namespace EspacoPotencial.Areas.Cadastro.Models.Public
         public class Builder
         {
             private geral _geral;
+            private ITipo _observer;
 
             public Builder()
             {
                 _geral = new geral();
             }
 
+            public void RegisterObserver(ITipo observer)
+            {
+                _observer = observer;
+            }
+
+            private void NotifyObservers(string tipo)
+            {
+                _observer?.AtualizarTipo(tipo);
+            }
+
             public Builder GetTipo(string tipo)
             {
                 _geral.Tipo = tipo;
+                NotifyObservers(tipo);
                 return this;
             }
+
 
             public Builder GetNome(string nome)
             {

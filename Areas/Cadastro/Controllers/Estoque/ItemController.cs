@@ -68,7 +68,7 @@ namespace EspacoPotencial.Areas.Cadastro.Controllers.Estoque
                 if (!await item.ValidateItemAsync(_context))
                 {
                     ModelState.AddModelError(string.Empty, "O tipo de armazém do item é diferente do tipo de armazém do estoque.");
-                   ViewData["estoque_id"] = new SelectList(_context.armazem, "id", "nome", item.estoque_id);
+                    ViewData["estoque_id"] = new SelectList(_context.armazem, "id", "nome", item.estoque_id);
                     ViewData["tipo_armazem"] = new SelectList(_context.tipo, "id", "descricao", item.tipo_armazem);
                     return View(item);
                 }

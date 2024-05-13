@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EspacoPotencial.Models.Account;
 using EspacoPotencial.Filters;
+using EspacoPotencial.Models.Observer;
 
 
 namespace EspacoPotencial.Controllers;
@@ -74,137 +75,73 @@ public class HomeController : Controller
 
     
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    [Autorizacao(new[] { TipoUsuario.SuperUser , TipoUsuario.Admin})]   
-    public async Task<IActionResult> Cadastro(CreateViewModel viewModel)
-    {
-
-        bool isGeralValid = viewModel.GeralModel != null;
-        bool isFuncionarioValid = viewModel.FuncionarioModel != null;
-        bool isUsuarioValid  = viewModel.UsuarioModel  != null;
-
-        if (isGeralValid && (isFuncionarioValid || isUsuarioValid))
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Autorizacao(new[] { TipoUsuario.SuperUser, TipoUsuario.Admin})]   
+        public async Task<IActionResult> Cadastro(CreateViewModel viewModel)
         {
-            using (var transaction = _context.Database.BeginTransaction())
+            bool isGeralValid = viewModel.GeralModel != null;
+            bool isFuncionarioValid = viewModel.FuncionarioModel != null;
+            bool isUsuarioValid = viewModel.UsuarioModel != null;
+
+            if (isGeralValid && (isFuncionarioValid || isUsuarioValid))
             {
-                try
+                using (var transaction = _context.Database.BeginTransaction())
                 {
-                    var geralBuilder = new geral.Builder()
-                    .GetTipo(viewModel.GeralModel.Tipo)
-                    .GetNome(viewModel.GeralModel.Nome)
-                    .GetSituacao(viewModel.GeralModel.Situacao)
-                    .GetDocto(viewModel.GeralModel.Docto)
-                    .GetEndereco(viewModel.GeralModel.Endereco)
-                    .GetNumero(viewModel.GeralModel.Numero)
-                    .GetComplemento(viewModel.GeralModel.Complemento)
-                    .GetCidade(viewModel.GeralModel.Cidade)
-                    .GetEstado(viewModel.GeralModel.Estado)
-                    .GetTelefone1(viewModel.GeralModel.Telefone1)
-                    .GetTelefone2(viewModel.GeralModel.Telefone2)
-                    .GetEmail1(viewModel.GeralModel.Email1)
-                    .GetEmail2(viewModel.GeralModel.Email2)
-                    .GetCep(viewModel.GeralModel.Cep)
-                    .GetDataCadastro(DateTime.Now);
-                    
-                    var novoGeral = geralBuilder.Build();
-                    _context.Add(novoGeral);
-                    await _context.SaveChangesAsync();
-                    int novoGeralId = novoGeral.Id;
-
-                   if (!(viewModel.GeralModel.Tipo == "2")){
-
-                        var novoFuncionario = new funcionario
-                        {
-                            geral_id = novoGeralId,
-                            Rg = viewModel.FuncionarioModel.Rg,
-                            Nascimento = viewModel.FuncionarioModel.Nascimento,
-                            centrocusto_id = viewModel.FuncionarioModel.centrocusto_id,
-                            CestaBasica = viewModel.FuncionarioModel.CestaBasica,
-                            banco_id = viewModel.FuncionarioModel.banco_id,
-                            Agencia = viewModel.FuncionarioModel.Agencia,
-                            Conta = viewModel.FuncionarioModel.Conta,
-                            Escolaridade = viewModel.FuncionarioModel.Escolaridade,
-                            Formacao = viewModel.FuncionarioModel.Formacao
-                        };
-
-                    if (viewModel.FuncionarioModel.ImagemFile != null)
+                    try
                     {
-                        using (var memoryStream = new MemoryStream())
-                        {
-                            await viewModel.FuncionarioModel.ImagemFile.CopyToAsync(memoryStream);
-                            novoFuncionario.Foto = memoryStream.ToArray();
-                        }
-                    }
-
-
-                        _context.Add(novoFuncionario);
-
-                        await _context.SaveChangesAsync();
-                        transaction.Commit(); 
-                        TempData["SuccessMessage"] = "Cadastro realizado com sucesso!";
-
-                    }else{
+                        var geralBuilder = new geral.Builder()
+                            .GetTipo(viewModel.GeralModel.Tipo)
+                            .GetNome(viewModel.GeralModel.Nome)
+                            .GetSituacao(viewModel.GeralModel.Situacao)
+                            .GetDocto(viewModel.GeralModel.Docto)
+                            .GetEndereco(viewModel.GeralModel.Endereco)
+                            .GetNumero(viewModel.GeralModel.Numero)
+                            .GetComplemento(viewModel.GeralModel.Complemento)
+                            .GetCidade(viewModel.GeralModel.Cidade)
+                            .GetEstado(viewModel.GeralModel.Estado)
+                            .GetTelefone1(viewModel.GeralModel.Telefone1)
+                            .GetTelefone2(viewModel.GeralModel.Telefone2)
+                            .GetEmail1(viewModel.GeralModel.Email1)
+                            .GetEmail2(viewModel.GeralModel.Email2)
+                            .GetCep(viewModel.GeralModel.Cep)
+                            .GetDataCadastro(DateTime.Now);
                         
-                        var usuario = new usuario{
-
-                            geral_id = novoGeralId,
-                            Situacao = viewModel.UsuarioModel.Situacao,
-                            Foto = viewModel.UsuarioModel.Foto,
-                            Sus = viewModel.UsuarioModel.Sus,
-                            Nascimento = viewModel.UsuarioModel.Nascimento,
-                            Ingresso = viewModel.UsuarioModel.Ingresso,
-                            DataLaudo = viewModel.UsuarioModel.DataLaudo,
-                            escolas_id = viewModel.UsuarioModel.escolas_id,
-                            comorbidade_id = viewModel.UsuarioModel.comorbidade_id,
-                            beneficio_id = viewModel.UsuarioModel.beneficio_id,
-                            HistoricoContato = viewModel.UsuarioModel.HistoricoContato,
-                            desligamento_id = viewModel.UsuarioModel.desligamento_id,
-                            usuario_descritivo_desligamento = viewModel.UsuarioModel.usuario_descritivo_desligamento,
-                            Alergia = viewModel.UsuarioModel.Alergia,
-                            Medicacao = viewModel.UsuarioModel.Medicacao,
-                            RestricaoAlimentar = viewModel.UsuarioModel.RestricaoAlimentar,
-                            Transporte = viewModel.UsuarioModel.Transporte
-                        };
-
-                                      
-                        if (viewModel.UsuarioModel.ImagemFile != null)
-                        {
-                            using (var memoryStream = new MemoryStream())
-                            {
-                                await viewModel.UsuarioModel.ImagemFile.CopyToAsync(memoryStream);
-                                usuario.Foto = memoryStream.ToArray();
-                            }
-                        } 
-
-                        _context.Add(usuario);
-
+                        var novoGeral = geralBuilder.Build();
+                        _context.Add(novoGeral);
                         await _context.SaveChangesAsync();
+                        int novoGeralId = novoGeral.Id;
+
+                        ITipo funcionarioObserver = new FuncionarioObserver(viewModel, novoGeralId, new funcionario(), _context);
+                        ITipo usuarioObserver = new UsuarioObserver(viewModel, novoGeralId, new usuario(), _context);
+
+                        geralBuilder.RegisterObserver(funcionarioObserver);
+                        geralBuilder.RegisterObserver(usuarioObserver);
+
                         transaction.Commit(); 
                         TempData["SuccessMessage"] = "Cadastro realizado com sucesso!";
+
+                        return RedirectToAction(nameof(Index), "Home");
                     }
-
-                    return RedirectToAction(nameof(Index), "Home");
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback(); 
-                    string errorMessage = $"Ocorreu um erro ao processar o cadastro: {ex.Message}";
-
-                    Exception innerException = ex.InnerException;
-                    while (innerException != null)
+                    catch (Exception ex)
                     {
-                        errorMessage += $"\nInner Exception: {innerException.Message}";
-                        innerException = innerException.InnerException;
-                    }
+                        transaction.Rollback(); 
+                        string errorMessage = $"Ocorreu um erro ao processar o cadastro: {ex.Message}";
 
-                    TempData["ErrorMessage"] = errorMessage;
-                    return RedirectToAction(nameof(Index)); // Redireciona em caso de falha
+                        Exception innerException = ex.InnerException;
+                        while (innerException != null)
+                        {
+                            errorMessage += $"\nInner Exception: {innerException.Message}";
+                            innerException = innerException.InnerException;
+                        }
+
+                        TempData["ErrorMessage"] = errorMessage;
+                        return RedirectToAction(nameof(Index)); // Redireciona em caso de falha
+                    }
                 }
             }
+
+            return RedirectToAction(nameof(Index));
         }
-
-        return RedirectToAction(nameof(Index));
-
-    }
 }
+
