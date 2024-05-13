@@ -62,6 +62,14 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
    ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/041a5cad-7ddb-45b9-b148-7c0992ca940c)
 
 3.0 -> Pattern OBSERVER
+ -Foi desenvolvido uma interface Itipo para criarmos o void Atualiza, e modificamos o builder Geral, asim foi incluido um Observer no Tipo do Cadastro. A classe que faz toda a validação é Models> Observer > Cadastro
+
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/b70d373a-ffed-43d2-a680-916a783dc8c6)
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/9a08ebef-b96f-4b67-a56e-dc3db4f01d04)
+   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/2cb2ba99-ae7c-4454-8bed-afddae7e5ac9)
+
+
+
 
 
 
