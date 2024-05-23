@@ -70,7 +70,7 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 
 
 
-
+"Host=localhost;Port=5432;Database=EspacoPotencial;Username=postgres;Password=Lucas#!23;"
 
 
 
