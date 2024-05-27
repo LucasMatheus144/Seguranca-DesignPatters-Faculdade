@@ -67,6 +67,11 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/97021975-adc3-4cfb-a698-42b95b93fbae)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/c646a81f-346b-4d87-9dfa-e2ffa38811f4)
 
+3.0 -> Patterns DTO
+
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/16a41e15-1596-494a-b6ae-5ff2c00ae46f)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/aeebc465-d75a-4100-8201-c6f3ffd96d7a)
+
 
 
 
