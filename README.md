@@ -47,26 +47,27 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # EVERTON
 
-No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, builder patterns, observer patterns e o state patterns
+No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, Builder patterns, Strategy patterns e o state patterns
 
-1.0 -> Pattern STATE
- - Foi criado a classe StateItem, onde é validado os tipo do armazem com o tipo do item. Se o armazem for null ou armazem diferente do tipo item -> o sistema trava e nao deixa caso contrario -> valido
- ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/274938d2-792c-4d96-94e2-c6f958736bdb)
- ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/545d1726-0fe4-4f65-bcf4-7c1b6f52d731)
- ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/1209d12a-79c5-462c-81ca-59d2f0b4af60)
+1.0 -> Patterns Builder
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/8281a1f2-3627-42fc-a88e-838a8f9b60ad)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/2877c57e-f563-4fc9-bae8-3e0f6ef03de5)
 
-2.0 -> Pattern BUILDER
- - Foi desenvolvido a classe chamada Geral e a classe Builderm qua qual o builder instancia a classe geral, logo após fomos no controller HomeController e na função que realiza o cadastro, instanciamos os campos de acordo com o BUILDER
-   
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/2dfdc744-9cfa-4ebd-bb16-ded082b61caf)
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/041a5cad-7ddb-45b9-b148-7c0992ca940c)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/324b269d-bbac-44d6-a441-4108d6a4af09)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/90237a5b-ac8f-424e-b107-c9309e674437)
 
-3.0 -> Pattern OBSERVER
- -Foi desenvolvido uma interface Itipo para criarmos o void Atualiza, e modificamos o builder Geral, asim foi incluido um Observer no Tipo do Cadastro. A classe que faz toda a validação é Models> Observer > Cadastro
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/db50c8dd-e6de-4893-b28c-3089e7c3fa16)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/e5131858-a4d2-4cf2-858d-84bf81acea9a)
 
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/b70d373a-ffed-43d2-a680-916a783dc8c6)
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/9a08ebef-b96f-4b67-a56e-dc3db4f01d04)
-   ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/2cb2ba99-ae7c-4454-8bed-afddae7e5ac9)
+
+2.0 -> Patterns Strategy 
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/4fb86872-d502-4c58-9c9e-8965c94222a2)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/89c5257e-844a-4e53-b148-f73a189ddc96)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/97021975-adc3-4cfb-a698-42b95b93fbae)
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/c646a81f-346b-4d87-9dfa-e2ffa38811f4)
+
+
+
 
 
 
