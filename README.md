@@ -61,6 +61,7 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 
 
 2.0 -> Patterns Strategy 
+
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/4fb86872-d502-4c58-9c9e-8965c94222a2)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/89c5257e-844a-4e53-b148-f73a189ddc96)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/97021975-adc3-4cfb-a698-42b95b93fbae)
