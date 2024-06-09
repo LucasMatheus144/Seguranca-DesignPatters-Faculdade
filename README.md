@@ -68,7 +68,21 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/97021975-adc3-4cfb-a698-42b95b93fbae)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/c646a81f-346b-4d87-9dfa-e2ffa38811f4)
 
-3.0 -> Patterns DTO
+3.0 -> Patterns DTO , O padrão DTO no seu projeto ajuda a manter a organização e eficiência da transferência de dados entre a camada de controle e a visualização, encapsulando os dados necessários de forma estruturada e coesa.
+
+Passo a Passo
+
+1-A implementação do DTO envolve criar classes que representem os dados que serão transferidos. No seu caso, a classe ChamadaViewModel serve como DTO para transferir informações sobre chamadas de sala de aula.
+
+2-A classe ChamadaViewModel é composta de várias propriedades que representam os dados necessários para a visualização e manipulação das informações de chamada de sala de aula. Além disso, ela contém uma classe interna Mostrar que representa os detalhes específicos da chamada.
+
+3-O controlador SalaAulaController usa o ChamadaViewModel para transferir dados entre a camada de controle e a visualização.
+
+3.1 -Aula: Este método busca os dados de sala de aula e agrupa os resultados, criando um modelo SalaAulaModel que é passado para a visualização.
+
+3.2 - Chamada (GET): Este método busca os dados dos usuários na sala e inicializa um modelo ChamadaViewModel com esses dados, passando-o para a visualização.
+
+3.3 -Chamada (POST): Este método recebe os dados do formulário, valida-os, e salva as informações de frequência no banco de dados.
 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/16a41e15-1596-494a-b6ae-5ff2c00ae46f)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/aeebc465-d75a-4100-8201-c6f3ffd96d7a)
