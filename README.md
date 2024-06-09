@@ -62,22 +62,7 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 
 2.0 -> Patterns Strategy , Foi desenvolvido uma interface , e essa interface vai direcionar a estrategia a ser tomada pelos dados que retornaram do Context(Banco de Dados)
 
-+-------------------+      +--------------------+
-|      Context      |      |     Strategy       |
-|-------------------|      |--------------------|
-| -strategy:Strategy|<---->| +algoritmo(): void |
-|-------------------|      |--------------------|
-| +executaAlgoritmo()|      +--------------------+
-+-------------------+             /\
-                                  /  \
-                                 /    \
-                                /      \
-                   +--------------------+    +--------------------+
-                   |  ConcreteStrategyA |    |  ConcreteStrategyB |
-                   |--------------------|    |--------------------|
-                   | +algoritmo(): void |    | +algoritmo(): void |
-                   +--------------------+    +--------------------+
-
+![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/836bd809-a929-4b29-b6b0-eade033dc1c3)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/4fb86872-d502-4c58-9c9e-8965c94222a2)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/89c5257e-844a-4e53-b148-f73a189ddc96)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/97021975-adc3-4cfb-a698-42b95b93fbae)
