@@ -61,6 +61,7 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 
 
 2.0 -> Patterns Strategy , Foi desenvolvido uma interface , e essa interface vai direcionar a estrategia a ser tomada pelos dados que retornaram do Context(Banco de Dados)
+
 +-------------------+      +--------------------+
 |      Context      |      |     Strategy       |
 |-------------------|      |--------------------|
