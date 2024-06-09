@@ -49,7 +49,7 @@
 
 No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, Builder patterns, Strategy patterns e o state patterns
 
-1.0 -> Patterns Builder
+1.0 -> Patterns Builder , foi criado dentro do model Geral, Funcionario e Usuario  , foi desenvolvido uma a classe GeralBuilder onde é um construtor para a classe geral, permitindo a criação de instâncias do cadastro geral de maneira mais controlada e legível.
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/8281a1f2-3627-42fc-a88e-838a8f9b60ad)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/2877c57e-f563-4fc9-bae8-3e0f6ef03de5)
 
@@ -60,7 +60,22 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/e5131858-a4d2-4cf2-858d-84bf81acea9a)
 
 
-2.0 -> Patterns Strategy 
+2.0 -> Patterns Strategy , Foi desenvolvido uma interface , e essa interface vai direcionar a estrategia a ser tomada pelos dados que retornaram do Context(Banco de Dados)
++-------------------+      +--------------------+
+|      Context      |      |     Strategy       |
+|-------------------|      |--------------------|
+| -strategy:Strategy|<---->| +algoritmo(): void |
+|-------------------|      |--------------------|
+| +executaAlgoritmo()|      +--------------------+
++-------------------+             /\
+                                  /  \
+                                 /    \
+                                /      \
+                   +--------------------+    +--------------------+
+                   |  ConcreteStrategyA |    |  ConcreteStrategyB |
+                   |--------------------|    |--------------------|
+                   | +algoritmo(): void |    | +algoritmo(): void |
+                   +--------------------+    +--------------------+
 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/4fb86872-d502-4c58-9c9e-8965c94222a2)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/89c5257e-844a-4e53-b148-f73a189ddc96)
