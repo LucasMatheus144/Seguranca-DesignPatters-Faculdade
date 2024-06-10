@@ -76,7 +76,7 @@ Passo a Passo
 
 2 - Nessa mesma classe, é composta por varias propriedades que representa os dados que são nescerssarios para a visualização e manipilação dessas dados (sala de aula) e alem disso, uma classe para ser exibir as informações.
 
-3 - O controller SalaAulaController usa a classe principal ChamadaViewModel para transferir os dados dos servições nescessarios e manipulação para visualizações
+3 - O controller SalaAulaController usa a classe principal ChamadaViewModel para transferir os dados dos servições nescessarios e manipulação para visualizações.
 
 3.1 -Aula: Este método busca os dados de sala de aula e agrupa os resultados, criando um modelo SalaAulaModel que é passado para a visualização da tela inicial.
 
