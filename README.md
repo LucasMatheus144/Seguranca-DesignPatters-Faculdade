@@ -86,13 +86,3 @@ Passo a Passo
 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/16a41e15-1596-494a-b6ae-5ff2c00ae46f)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/aeebc465-d75a-4100-8201-c6f3ffd96d7a)
-
-
-
-
-
-
-"Host=localhost;Port=5432;Database=EspacoPotencial;Username=postgres;Password=Lucas#!23;"
-
-
-
