@@ -72,17 +72,17 @@ No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, 
 
 Passo a Passo
 
-1-A implementação do DTO envolve criar classes que representem os dados que serão transferidos. No seu caso, a classe ChamadaViewModel serve como DTO para transferir informações sobre chamadas de sala de aula.
+1 - Foi desenvolvido a classe que representa a transferencia de dados, que seria o ChamadaViewModel, na qual é o model que transfere as informações sobre a sala de aula.
 
-2-A classe ChamadaViewModel é composta de várias propriedades que representam os dados necessários para a visualização e manipulação das informações de chamada de sala de aula. Além disso, ela contém uma classe interna Mostrar que representa os detalhes específicos da chamada.
+2 - Nessa mesma classe, é composta por varias propriedades que representa os dados que são nescerssarios para a visualização e manipilação dessas dados (sala de aula) e alem disso, uma classe para ser exibir as informações.
 
-3-O controlador SalaAulaController usa o ChamadaViewModel para transferir dados entre a camada de controle e a visualização.
+3 - O controller SalaAulaController usa a classe principal ChamadaViewModel para transferir os dados dos servições nescessarios e manipulação para visualizações
 
-3.1 -Aula: Este método busca os dados de sala de aula e agrupa os resultados, criando um modelo SalaAulaModel que é passado para a visualização.
+3.1 -Aula: Este método busca os dados de sala de aula e agrupa os resultados, criando um modelo SalaAulaModel que é passado para a visualização da tela inicial.
 
-3.2 - Chamada (GET): Este método busca os dados dos usuários na sala e inicializa um modelo ChamadaViewModel com esses dados, passando-o para a visualização.
+3.2 - Chamada (GET): Este método busca os dados dos usuários na sala e inicializa um modelo ChamadaViewModel com esses dados, passando-o para a visualização da tela da chamada.
 
-3.3 -Chamada (POST): Este método recebe os dados do formulário, valida-os, e salva as informações de frequência no banco de dados.
+3.3 -Chamada (POST): Este método recebe os dados do formulário, validados , e salva as informações de frequência no banco de dados.
 
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/16a41e15-1596-494a-b6ae-5ff2c00ae46f)
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/aeebc465-d75a-4100-8201-c6f3ffd96d7a)
