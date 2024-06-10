@@ -47,7 +47,7 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # EVERTON
 
-No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, Builder patterns, Strategy patterns e o state patterns
+No trabalho foi decidido que vamos utilizar 3 designer patters que foi passado, Builder patterns, Strategy patterns e o DTO
 
 1.0 -> Patterns Builder , foi criado dentro do model Geral, Funcionario e Usuario  , foi desenvolvido uma a classe GeralBuilder onde é um construtor para a classe geral, permitindo a criação de instâncias do cadastro geral de maneira mais controlada e legível.
 ![image](https://github.com/LucasMatheus144/Seguranca-DesignPatters-Faculdade/assets/79222732/8281a1f2-3627-42fc-a88e-838a8f9b60ad)
